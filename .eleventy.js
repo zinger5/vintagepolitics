@@ -1,6 +1,6 @@
 module.exports = function(eleventyConfig) {
   // Tell Eleventy to copy your image folder
-  eleventyConfig.addPassthroughCopy("img");
+  eleventyConfig.addPassthroughCopy("uploads");
 
   // Create a smart, grouped collection for the episodes
   eleventyConfig.addCollection("episodesBySeason", function(collectionApi) {

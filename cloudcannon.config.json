@@ -1,6 +1,6 @@
 {
   "paths": {
-    "uploads": "img",
+    "uploads": "uploads",
     "static": ""
   },
   "collections_config": {
