@@ -2,30 +2,41 @@
 layout: base.njk
 title: About
 permalink: about.html
+profile_image: placeholder.jpg
+story_paragraphs:
+  - "Vintage Politics brings together politics, journalism, public life and wine. Each guest reflects on the moments that shaped their life and career, with wines chosen to mark those defining years."
+  - "The result is a different kind of conversation — one that moves beyond the usual soundbites to reveal the stories, memories and personalities behind public life."
+  - "Every vintage tells a story. So does every guest."
+bio_title: "Abbie Bennington"
+bio_text: "Creator and host of Vintage Politics, Abbie is a journalist, broadcaster and wine expert. A former BBC News at Ten senior producer, she also worked alongside Nick Robinson during his time as BBC Political Editor."
+credentials:
+  - "WSET Diploma holder"
+  - "Wine writer, educator and judge"
+  - "Chair of the Association of Wine Educators"
+  - "President of the London Tasting Awards 2026"
+  - "Bordeaux Wine School accredited tutor"
+  - "Rioja Educator"
+  - "Cava DO Advanced Educator"
 ---
 <div class="max-w-5xl mx-auto px-4 py-12">
     <div class="flex flex-col md:flex-row gap-12 items-start">
         <div class="w-full md:w-1/2">
             <h1 class="text-4xl font-bold text-burgundy mb-6 uppercase tracking-wide">The Story</h1>
-            <p class="text-lg text-ink mb-4 leading-relaxed">Vintage Politics brings together politics, journalism, public life and wine. Each guest reflects on the moments that shaped their life and career, with wines chosen to mark those defining years.</p>
-            <p class="text-lg text-ink mb-4 leading-relaxed">The result is a different kind of conversation — one that moves beyond the usual soundbites to reveal the stories, memories and personalities behind public life.</p>
-            <p class="text-lg text-ink mb-8 leading-relaxed">Every vintage tells a story. So does every guest.</p>
             
-            <h2 class="text-2xl font-bold text-teal mb-3 uppercase tracking-wide border-t border-tan pt-6">Abbie Bennington</h2>
-            <p class="text-ink leading-relaxed mb-4">Creator and host of Vintage Politics, Abbie is a journalist, broadcaster and wine expert. A former BBC News at Ten senior producer, she also worked alongside Nick Robinson during his time as BBC Political Editor.</p>
+            {% for paragraph in story_paragraphs %}
+            <p class="text-lg text-ink {% if loop.last %}mb-10{% else %}mb-4{% endif %} leading-relaxed">{{ paragraph }}</p>
+            {% endfor %}
+            
+            <h2 class="text-2xl font-bold text-teal mb-3 uppercase tracking-wide border-t border-tan pt-6">{{ bio_title }}</h2>
+            <p class="text-ink leading-relaxed mb-4">{{ bio_text }}</p>
             <ul class="list-disc pl-5 space-y-2 text-ink">
-                <li>WSET Diploma holder</li>
-                <li>Wine writer, educator and judge</li>
-                <li>Chair of the Association of Wine Educators</li>
-                <li>President of the London Tasting Awards 2026</li>
-                <li>Bordeaux Wine School accredited tutor</li>
-                <li>Rioja Educator</li>
-                <li>Cava DO Advanced Educator</li>
+                {% for item in credentials %}
+                <li>{{ item }}</li>
+                {% endfor %}
             </ul>
         </div>
         <div class="w-full md:w-1/2">
-            <!-- Add Abbie's portrait image path to the style attribute below -->
-            <div class="aspect-w-3 aspect-h-4 bg-gray-300 rounded-lg shadow-xl flex items-center justify-center text-ink overflow-hidden bg-cover bg-center" style="background-image: url('placeholder.jpg');">
+            <div class="aspect-w-3 aspect-h-4 bg-gray-300 rounded-lg shadow-xl flex items-center justify-center text-ink overflow-hidden bg-cover bg-center" style="background-image: url('{{ profile_image }}');">
             </div>
         </div>
     </div>
