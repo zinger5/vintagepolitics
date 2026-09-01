@@ -42,8 +42,9 @@ credentials:
             </ul>
         </div>
         <div class="w-full md:w-1/2">
-            <div class="aspect-w-3 aspect-h-4 bg-gray-300 rounded-lg shadow-xl flex items-center justify-center text-ink overflow-hidden bg-cover bg-center" style="background-image: url('{{ profile_image }}');">
-            </div>
+            {% if profile_image %}
+            <img src="{{ profile_image }}" alt="{{ bio_title }}" class="w-full h-auto object-cover rounded-lg shadow-xl">
+            {% endif %}
         </div>
     </div>
 </div>
