@@ -2,7 +2,7 @@
 layout: base.njk
 title: About
 permalink: about.html
-profile_image: /uploads/signature-photo-01.jpeg
+profile_image: /_site/img/about/abbie-001.webp
 story_paragraphs:
   - Vintage Politics brings together politics, journalism, public life and wine.
     Each guest reflects on the moments that shaped their life and career, with
@@ -43,7 +43,7 @@ credentials:
         </div>
         <div class="w-full md:w-1/2">
             {% if profile_image %}
-            <img src="{{ profile_image }}" alt="{{ bio_title }}" class="w-full h-auto object-cover rounded-lg shadow-xl">
+            <img src="{{ profile_image }}" alt="{{ bio_title }}" class="w-full h-auto object-cover rounded-lg shadow-xl" />
             {% endif %}
         </div>
     </div>
