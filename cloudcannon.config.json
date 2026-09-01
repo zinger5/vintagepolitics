@@ -32,9 +32,21 @@
       "options": {
         "item_name": "Wine"
       }
-    }
+    },
     "profile_image": { 
         "type": "image" 
+    },
+    "partners[*].image": {
+        "type": "image"
+    },
+    "hosts[*].image": {
+        "type": "image"
+    },
+    "offers[*].image": {
+        "type": "image"
+    },
+    "club_offer.image": {
+        "type": "image"
     }
   }
 }

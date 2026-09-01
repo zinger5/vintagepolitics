@@ -2,48 +2,71 @@
 layout: base.njk
 title: Club
 permalink: club.html
+hero_title: "The Vintage Politics Club"
+hero_subtitle: "Register your interest for our upcoming membership. Be the first to access extended content, advance guest news, wine recommendations, partner offers, and behind-the-scenes material."
+tier_1:
+  label: "Membership tier"
+  name: "The Lobby"
+  price: "£6"
+  period: "/month"
+  description: "For people who want to be closer to Vintage Politics."
+  benefits:
+    - "Early access to episodes"
+    - "Members-only newsletter and behind-the-scenes updates"
+    - "Vote on future guests and submit questions"
+    - "15% off Académie du Vin books"
+    - "10% off Wine Scholar Guild courses"
+    - "Selected partner offers from Vintage Politics supporters"
+tier_2:
+  label: "Premium membership tier"
+  name: "The Cabinet"
+  price: "£15"
+  period: "/month"
+  description: "Everything in The Lobby, plus:"
+  benefits:
+    - "An online tasting with host Abbie Bennington for you and up to 10 guests (not including wines) worth £500"
+    - "Members-only Q&As and conversations"
+    - "Regular and different wine offers and partner benefits"
+    - "Priority booking and preferential pricing for live events"
+    - "Curated wine recommendations linked to episodes"
+form_title: "Join the Waitlist"
 ---
 <div class="max-w-4xl mx-auto w-full px-4 py-20 text-center">
-    <h1 class="text-5xl font-bold text-burgundy mb-6 uppercase tracking-wide">The Vintage Politics Club</h1>
-    <p class="text-xl text-ink mb-10 max-w-2xl mx-auto">Register your interest for our upcoming membership. Be the first to access extended content, advance guest news, wine recommendations, partner offers, and behind-the-scenes material.</p>
+    <h1 class="text-5xl font-bold text-burgundy mb-6 uppercase tracking-wide">{{ hero_title }}</h1>
+    <p class="text-xl text-ink mb-10 max-w-2xl mx-auto">{{ hero_subtitle }}</p>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-10">
         <article class="bg-white p-8 rounded-lg shadow-xl border-t-4 border-burgundy flex flex-col">
-            <p class="text-xs font-bold uppercase tracking-widest text-rust mb-2">Membership tier</p>
+            <p class="text-xs font-bold uppercase tracking-widest text-rust mb-2">{{ tier_1.label }}</p>
             <div class="flex flex-wrap items-baseline justify-between gap-2 mb-4">
-                <h2 class="text-3xl font-bold text-burgundy uppercase">The Lobby</h2>
-                <p class="text-xl font-bold text-teal">£6<span class="text-sm font-normal text-gray-600">/month</span></p>
+                <h2 class="text-3xl font-bold text-burgundy uppercase">{{ tier_1.name }}</h2>
+                <p class="text-xl font-bold text-teal">{{ tier_1.price }}<span class="text-sm font-normal text-gray-600">{{ tier_1.period }}</span></p>
             </div>
-            <p class="text-ink mb-6">For people who want to be closer to Vintage Politics.</p>
+            <p class="text-ink mb-6">{{ tier_1.description }}</p>
             <ul class="space-y-3 text-sm text-gray-700 flex-grow">
-                <li class="flex gap-3"><span class="text-rust font-bold" aria-hidden="true">+</span><span>Early access to episodes</span></li>
-                <li class="flex gap-3"><span class="text-rust font-bold" aria-hidden="true">+</span><span>Members-only newsletter and behind-the-scenes updates</span></li>
-                <li class="flex gap-3"><span class="text-rust font-bold" aria-hidden="true">+</span><span>Vote on future guests and submit questions</span></li>
-                <li class="flex gap-3"><span class="text-rust font-bold" aria-hidden="true">+</span><span>15% off Académie du Vin books</span></li>
-                <li class="flex gap-3"><span class="text-rust font-bold" aria-hidden="true">+</span><span>10% off Wine Scholar Guild courses</span></li>
-                <li class="flex gap-3"><span class="text-rust font-bold" aria-hidden="true">+</span><span>Selected partner offers from Vintage Politics supporters</span></li>
+                {% for benefit in tier_1.benefits %}
+                <li class="flex gap-3"><span class="text-rust font-bold" aria-hidden="true">+</span><span>{{ benefit }}</span></li>
+                {% endfor %}
             </ul>
         </article>
 
         <article class="bg-teal text-cream p-8 rounded-lg shadow-xl border-t-4 border-rust flex flex-col">
-            <p class="text-xs font-bold uppercase tracking-widest text-tan mb-2">Premium membership tier</p>
+            <p class="text-xs font-bold uppercase tracking-widest text-tan mb-2">{{ tier_2.label }}</p>
             <div class="flex flex-wrap items-baseline justify-between gap-2 mb-4">
-                <h2 class="text-3xl font-bold uppercase">The Cabinet</h2>
-                <p class="text-xl font-bold text-white">£15<span class="text-sm font-normal text-cream/80">/month</span></p>
+                <h2 class="text-3xl font-bold uppercase">{{ tier_2.name }}</h2>
+                <p class="text-xl font-bold text-white">{{ tier_2.price }}<span class="text-sm font-normal text-cream/80">{{ tier_2.period }}</span></p>
             </div>
-            <p class="text-cream mb-6">Everything in The Lobby, plus:</p>
+            <p class="text-cream mb-6">{{ tier_2.description }}</p>
             <ul class="space-y-3 text-sm text-cream/90 flex-grow">
-                <li class="flex gap-3"><span class="text-tan font-bold" aria-hidden="true">+</span><span>An online tasting with host Abbie Bennington for you and up to 10 guests (not including wines) worth £500</span></li>
-                <li class="flex gap-3"><span class="text-tan font-bold" aria-hidden="true">+</span><span>Members-only Q&amp;As and conversations</span></li>
-                <li class="flex gap-3"><span class="text-tan font-bold" aria-hidden="true">+</span><span>Regular and different wine offers and partner benefits</span></li>
-                <li class="flex gap-3"><span class="text-tan font-bold" aria-hidden="true">+</span><span>Priority booking and preferential pricing for live events</span></li>
-                <li class="flex gap-3"><span class="text-tan font-bold" aria-hidden="true">+</span><span>Curated wine recommendations linked to episodes</span></li>
+                {% for benefit in tier_2.benefits %}
+                <li class="flex gap-3"><span class="text-tan font-bold" aria-hidden="true">+</span><span>{{ benefit }}</span></li>
+                {% endfor %}
             </ul>
         </article>
     </div>
 
     <div class="bg-white p-10 rounded-lg shadow-2xl border-t-4 border-rust">
-        <h2 class="text-3xl font-bold text-teal mb-4 uppercase">Join the Waitlist</h2>
+        <h2 class="text-3xl font-bold text-teal mb-4 uppercase">{{ form_title }}</h2>
         <form action="https://api.web3forms.com/submit" method="POST" class="max-w-md mx-auto">
             <input type="hidden" name="access_key" value="e34d3866-72b4-46cc-aa7b-c9b6f7a750d3">
             <input type="hidden" name="subject" value="Vintage Politics Club waitlist enquiry">
