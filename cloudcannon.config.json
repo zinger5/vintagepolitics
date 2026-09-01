@@ -1,0 +1,38 @@
+{
+  "paths": {
+    "uploads": "img",
+    "static": ""
+  },
+  "collections_config": {
+    "episodes": {
+      "path": "episodes",
+      "url": "/episodes/{slug}/",
+      "name": "Episodes",
+      "singular_name": "Episode",
+      "add_options": [
+        {
+          "name": "Add New Episode",
+          "schema": "default"
+        }
+      ]
+    }
+  },
+  "_inputs": {
+    "date": {
+      "type": "date"
+    },
+    "image_path": {
+      "type": "image"
+    },
+    "season_info": {
+      "type": "text",
+      "comment": "e.g., Series 1, Episode 12"
+    },
+    "wines": {
+      "type": "array",
+      "options": {
+        "item_name": "Wine"
+      }
+    }
+  }
+}
