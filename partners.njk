@@ -2,31 +2,35 @@
 layout: base.njk
 title: Partners
 permalink: partners.html
-hero_title: "Our Partners"
-hero_subtitle: "Vintage Politics is made possible through the support of esteemed partners who share our commitment to quality conversation."
+hero_title: Our Partners
+hero_subtitle: Vintage Politics is made possible through the support of esteemed
+  partners who share our commitment to quality conversation.
 partners:
-  - name: "Corney & Barrow"
-    image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=1000&auto=format&fit=crop"
-    url: "https://www.corneyandbarrow.com/"
-    description: "Proud partners for Series Two, providing exceptional wine curation."
-  - name: "ETO"
-    image: "https://images.unsplash.com/photo-1547595628-c61a29f496f0?q=80&w=1000&auto=format&fit=crop"
-    url: "https://www.etowine.com/"
-    description: "Innovative wine preservation, ensuring every glass poured at The Savoy is perfect."
-collaborate_title: "Work with Vintage Politics"
-collaborate_text: "We are open to sponsorship, episode partnerships, live events, and bespoke collaborations."
-hosts_title: "Our Hosts"
-hosts_subtitle: "Vintage Politics has been hosted by fabulous venues which share our passion for incredible wines. Check them out below."
+  - name: Corney & Barrow
+    image: https://www.corneyandbarrow.com/media/wysiwyg/c_b_delivery_and_returns_policy.jpg
+    url: https://www.corneyandbarrow.com/
+    description: Proud partners for Series Two, providing exceptional wine curation.
+  - name: ETO
+    image: https://www.etowine.com/cdn/shop/files/The_perfect_gift_mkII.jpg
+    url: https://www.etowine.com/
+    description: An elegant wine decanter and patented preservation system, keeping
+      wine fresh and full of flavour for longer.
+collaborate_title: Work with Vintage Politics
+collaborate_text: We are open to sponsorship, episode partnerships, live events,
+  and bespoke collaborations.
+hosts_title: Our Hosts
+hosts_subtitle: Vintage Politics has been hosted by fabulous venues which share
+  our passion for incredible wines. Check them out below.
 hosts:
-  - name: "Hide Restaurant Mayfair"
-    image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1000&auto=format&fit=crop"
-    url: "https://www.hide.co.uk/"
-  - name: "Quo Vadis"
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000&auto=format&fit=crop"
-    url: "https://www.quovadissoho.co.uk/"
-  - name: "Restaurant 1890 by Gordon Ramsay at The Savoy"
-    image: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=1000&auto=format&fit=crop"
-    url: "https://www.gordonramsayrestaurants.com/restaurants/restaurant-1890/"
+  - name: Hide Restaurant Mayfair
+    image: https://hide.co.uk/wp-content/uploads/2025/03/4d9855f21a6a28f3afbf60b559557428.jpg?q=80&w=1000&auto=format&fit=crop
+    url: https://www.hide.co.uk/
+  - name: Quo Vadis
+    image: https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000&auto=format&fit=crop
+    url: https://www.quovadissoho.co.uk/
+  - name: Restaurant 1890 by Gordon Ramsay at The Savoy
+    image: https://www.gordonramsayrestaurants.com/assets/Uploads/_resampled/CroppedFocusedImage1920108050-59-vb1936144-GRSavoy1890Jan202225-1.jpg
+    url: https://www.gordonramsayrestaurants.com/restaurants/restaurant-1890/
 ---
 <div class="flex-grow max-w-7xl mx-auto w-full px-4 py-12">
     <h1 class="text-4xl font-bold text-teal mb-6 uppercase tracking-wide text-center">{{ hero_title }}</h1>
@@ -35,7 +39,7 @@ hosts:
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
         {% for partner in partners %}
         <div class="bg-white p-8 rounded-lg shadow-md border border-tan/30 text-center">
-            <img src="{{ partner.image }}" alt="{{ partner.name }}" class="w-full h-52 object-cover rounded mb-6 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+            <img src="{{ partner.image }}" alt="{{ partner.name }}" class="w-full h-52 object-cover rounded mb-6 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out" />
             <h3 class="text-2xl font-bold text-burgundy uppercase mb-2"><a href="{{ partner.url }}" target="_blank" rel="noopener noreferrer" class="hover:text-rust transition">{{ partner.name }}</a></h3>
             <p class="text-gray-600">{{ partner.description }}</p>
             <a href="{{ partner.url }}" target="_blank" rel="noopener noreferrer" class="inline-block mt-5 text-sm font-bold text-rust uppercase tracking-wider hover:text-teal transition">Visit website &rarr;</a>
@@ -58,7 +62,7 @@ hosts:
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             {% for host in hosts %}
             <article class="bg-white rounded-lg shadow-md border border-tan/30 overflow-hidden text-center">
-                <img src="{{ host.image }}" alt="{{ host.name }}" class="w-full h-56 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+                <img src="{{ host.image }}" alt="{{ host.name }}" class="w-full h-56 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out" />
                 <div class="p-6">
                     <h3 class="text-xl font-bold text-burgundy uppercase mb-3"><a href="{{ host.url }}" target="_blank" rel="noopener noreferrer" class="hover:text-rust transition">{{ host.name }}</a></h3>
                     <a href="{{ host.url }}" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-rust uppercase tracking-wider hover:text-teal transition">Visit website &rarr;</a>
