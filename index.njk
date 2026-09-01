@@ -3,43 +3,49 @@ layout: base.njk
 title: Home
 permalink: index.html
 hero:
-  title: "GREAT POLITICAL STORIES,<br>TOLD THROUGH WINE"
-  subtitle: "Vintage Politics explores the people, decisions and defining moments behind politics, journalism and public life one bottle at a time."
-  button_text: "Watch Latest Episode"
+  title: GREAT POLITICAL STORIES,<br>TOLD THROUGH WINE
+  subtitle: Vintage Politics explores the people, decisions and defining moments
+    behind politics, journalism and public life one bottle at a time.
+  button_text: Watch Latest Episode
 offers_section:
-  eyebrow: "For our listeners"
-  title: "Partner offers & Club access"
-  link_text: "Meet our partners &rarr;"
-  link_url: "partners.html"
+  eyebrow: For our listeners
+  title: Partner offers & Club access
+  link_text: Meet our partners &rarr;
+  link_url: partners.html
 offers:
-  - eyebrow: "ETO - our Official Wine Accessories Partner"
-    title: "15% off wine preservation"
-    description: "Enjoy 15% off an ETO decanter and keep every bottle tasting at its best."
-    image: "https://www.etowine.com/cdn/shop/files/The_perfect_gift_mkII.jpg"
-    link_text: "Shop ETO &rarr;"
-    link_url: "https://www.etowine.com/"
-  - eyebrow: "Corney & Barrow - Our Official Wine Partner"
-    title: "The series wine case"
-    description: "Discover a limited-edition case of wines selected from the Vintage Politics series."
-    image: "https://www.corneyandbarrow.com/media/wysiwyg/c_b_delivery_and_returns_policy.jpg"
-    link_text: "Explore the case &rarr;"
-    link_url: "https://www.corneyandbarrow.com/"
+  - eyebrow: ETO - our Official Wine Accessories Partner
+    title: 15% off wine preservation
+    description: Enjoy 15% off an ETO decanter and keep every bottle tasting at its best.
+    image: https://www.etowine.com/cdn/shop/files/The_perfect_gift_mkII.jpg
+    link_text: Shop ETO &rarr;
+    link_url: https://www.etowine.com/
+  - eyebrow: Corney & Barrow - Our Official Wine Partner
+    title: The series wine case
+    description: Discover a limited-edition case of wines selected from the Vintage
+      Politics series.
+    image: https://www.corneyandbarrow.com/media/wysiwyg/c_b_delivery_and_returns_policy.jpg
+    link_text: Explore the case &rarr;
+    link_url: https://www.corneyandbarrow.com/
 club_offer:
-  eyebrow: "BECOME A MEMBER"
-  title: "Join The Vintage Politics Club"
-  description: "Access exclusive tastings, discounts with our partners and breaking guest news ahead of the show."
-  image: "img/club/VintagePolitics_Cheers_Round_Burgundy.png"
-  link_text: "JOIN NOW &rarr;"
-  link_url: "club.html"
+  eyebrow: BECOME A MEMBER
+  title: Join The Vintage Politics Club
+  description: Access exclusive tastings, discounts with our partners and breaking
+    guest news ahead of the show.
+  image: img/club/VintagePolitics_Cheers_Round_Burgundy.png
+  link_text: JOIN NOW &rarr;
+  link_url: club.html
 latest_episode:
-  title: "Latest Episode: James Lyons"
-  youtube_id: "GwqIO19rNc0?si=MQGjkwZTJkgyESQ-"
-  episode_title: "A Vintage Politics Special &rarr;"
-  episode_url: "episode-james-lyons.html"
-  description: "James Lyons, Starmer's former Director of Strategic Communications, joins Abbie to unpack the political landscape over an exceptional vintage."
+  title: 'Latest Episode: James Lyons'
+  youtube_id: GwqIO19rNc0?si=MQGjkwZTJkgyESQ-
+  episode_title: A Vintage Politics Special &rarr;
+  episode_url: episode-james-lyons.html
+  description: James Lyons, Starmer's former Director of Strategic Communications,
+    joins Abbie to unpack the political landscape over an exceptional vintage.
 format_section:
-  title: "The Format"
-  description: "Wines are chosen to mark key moments in each guest's story, before the episode ends with their birth-year vintage. The challenge? Guess what their own vintage is worth…"
+  title: The Format
+  description: Each wine marks a key moment in the guest’s story, culminating in a
+    bottle from their birth year. The challenge? Guess what their own vintage is
+    worth.
 ---
 <style>
     .hero-slide { opacity: 0; transition: opacity 1s ease-in-out; }
@@ -84,7 +90,7 @@ format_section:
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             {% for offer in offers %}
             <article class="bg-white text-ink rounded-lg overflow-hidden shadow-lg flex flex-col">
-                <img src="{{ offer.image }}" alt="Partner image" class="w-full h-20 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+                <img src="{{ offer.image }}" alt="Partner image" class="w-full h-20 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out" />
                 <div class="p-4 flex flex-col flex-grow">
                     <p class="text-xs font-bold uppercase tracking-widest text-rust mb-1">{{ offer.eyebrow }}</p>
                     <h3 class="text-lg font-bold text-burgundy mb-1">{{ offer.title }}</h3>
@@ -95,7 +101,7 @@ format_section:
             {% endfor %}
 
             <article class="bg-cream text-ink rounded-lg overflow-hidden shadow-lg border-2 border-rust flex flex-col">
-                <img src="{{ club_offer.image }}" alt="Club image" class="w-full h-20 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+                <img src="{{ club_offer.image }}" alt="Club image" class="w-full h-20 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out" />
                 <div class="p-4 flex flex-col flex-grow">
                     <p class="text-xs font-bold uppercase tracking-widest text-rust mb-1">{{ club_offer.eyebrow }}</p>
                     <h3 class="text-lg font-bold text-burgundy mb-1">{{ club_offer.title }}</h3>
