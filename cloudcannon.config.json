@@ -4,18 +4,20 @@
     "static": ""
   },
   "collections_config": {
-    "episodes": {
-      "path": "episodes",
-      "url": "/episodes/{slug}/",
-      "name": "Episodes",
-      "singular_name": "Episode",
-      "schemas": {
-        "default": {
-          "path": ".cloudcannon/schemas/episode.md"
-        }
-      }
-    }
+  "episodes": {
+    "path": "episodes"
   },
+  "pages": {
+    "path": "",
+    "glob": [
+      "*.njk",
+      "*.md",
+      "*.html"
+    ],
+    "name": "Pages",
+    "icon": "wysiwyg"
+  }
+}
   "_inputs": {
     "date": {
       "type": "date"
