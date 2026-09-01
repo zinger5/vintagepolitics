@@ -9,12 +9,11 @@
       "url": "/episodes/{slug}/",
       "name": "Episodes",
       "singular_name": "Episode",
-      "add_options": [
-        {
-          "name": "Add New Episode",
-          "schema": "default"
+      "schemas": {
+        "default": {
+          "path": ".cloudcannon/schemas/episode.md"
         }
-      ]
+      }
     }
   },
   "_inputs": {
@@ -26,7 +25,7 @@
     },
     "season_info": {
       "type": "text",
-      "comment": "e.g., Series 1, Episode 12"
+      "comment": "e.g., Series 2, Episode 1"
     },
     "wines": {
       "type": "array",
