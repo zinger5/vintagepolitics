@@ -58,21 +58,25 @@ format_section:
     /* Swiper Navigation Button Styling */
     .offers-swiper .swiper-button-next,
     .offers-swiper .swiper-button-prev {
-        color: #FDFBF7; /* cream */
-        background-color: rgba(43, 89, 93, 0.8); /* teal with opacity */
-        width: 40px;
-        height: 40px;
+        color: #FFFFFF !important; /* White icon arrow */
+        background-color: #C85A32 !important; /* Your site's rust/orange color */
+        width: 36px;
+        height: 36px;
         border-radius: 9999px;
-        transition: background-color 0.2s ease;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
+    
     .offers-swiper .swiper-button-next:after,
     .offers-swiper .swiper-button-prev:after {
-        font-size: 16px;
+        font-size: 14px !important;
         font-weight: bold;
     }
+    
     .offers-swiper .swiper-button-next:hover,
     .offers-swiper .swiper-button-prev:hover {
-        background-color: #A03D49; /* burgundy */
+        background-color: #A03D49 !important; /* Burgundy highlight on hover */
+        transform: scale(1.05);
     }
 </style>
 
