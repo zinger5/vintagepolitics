@@ -1,0 +1,24 @@
+---
+layout: base.njk
+title: Guests
+permalink: guests.html
+---
+<div class="max-w-7xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-teal mb-4 uppercase tracking-wide">THE GUEST LIST</h1>
+    <p class="text-lg text-ink mb-10 max-w-2xl">The political figures, journalists and public voices who have joined us to share their stories — and the wines that shaped them.</p>
+    
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {% for ep in collections.episode | reverse %}
+        
+        <!-- Create a clean variable to avoid breaking the HTML quotes -->
+        {% set clean_image = ep.data.image_path | replace("_720p", "") %}
+        
+        <a href="{{ ep.url }}" class="group relative overflow-hidden rounded shadow-lg block">
+            <div class="w-full h-80 bg-gray-400 flex items-center justify-center text-cream transition transform duration-500 group-hover:scale-105 bg-cover bg-center" style="background-image: url('{{ clean_image }}');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent opacity-80"></div>
+            <div class="absolute bottom-0 left-0 p-4"><h3 class="text-cream font-bold text-lg uppercase">{{ ep.data.title }}</h3></div>
+        </a>
+        
+        {% endfor %}
+    </div>
+</div>

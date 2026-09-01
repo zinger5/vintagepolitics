@@ -1,0 +1,114 @@
+---
+layout: base.njk
+title: Home
+permalink: index.html
+---
+<style>
+    .hero-slide { opacity: 0; transition: opacity 1s ease-in-out; }
+    .hero-slide.active { opacity: 1; }
+    @media (prefers-reduced-motion: reduce) {
+        .hero-slide { transition: none; }
+        .hero-slide.active { opacity: 1; }
+    }
+</style>
+
+<!-- Hero Section -->
+<section class="relative bg-ink text-cream py-24 px-4 text-center overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center hero-slide active" style="background-image: url('img/hero-carousel/herocarousel-001_720p.webp');" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-cover bg-center hero-slide" style="background-image: url('img/hero-carousel/herocarousel-002_720p.webp');" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-cover bg-center hero-slide" style="background-image: url('img/hero-carousel/herocarousel-003_720p.webp');" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-cover bg-center hero-slide" style="background-image: url('img/hero-carousel/herocarousel-004_720p.webp');" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-cover bg-center hero-slide" style="background-image: url('img/hero-carousel/herocarousel-005_720p.webp');" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-cover bg-center hero-slide" style="background-image: url('img/hero-carousel/herocarousel-006_720p.webp');" aria-hidden="true"></div>
+    <div class="absolute inset-0 bg-ink opacity-60"></div>
+    <div class="absolute inset-0 bg-teal opacity-20"></div>
+    <div class="relative max-w-4xl mx-auto z-10">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 uppercase tracking-wide text-white">GREAT POLITICAL STORIES,<br>TOLD THROUGH WINE</h1>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Vintage Politics explores the people, decisions and defining moments behind politics, journalism and public life one bottle at a time.</p>
+        <div class="flex justify-center space-x-4">
+            <a href="#latest" class="bg-rust hover:bg-white hover:text-rust text-white font-bold py-3 px-6 rounded uppercase tracking-wider transition">Watch Latest Episode</a>
+        </div>
+    </div>
+</section>
+
+<!-- Listener Offers Section -->
+<section aria-labelledby="listener-offers" class="bg-teal text-cream px-4 py-5">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-2 mb-4">
+            <div>
+                <p class="text-xs font-bold uppercase tracking-widest text-tan mb-1">For our listeners</p>
+                <h2 id="listener-offers" class="text-xl md:text-2xl font-bold uppercase tracking-wide">Partner offers &amp; Club access</h2>
+            </div>
+            <a href="partners.html" class="text-xs font-bold uppercase tracking-wider text-tan hover:text-white transition">Meet our partners &rarr;</a>
+        </div>
+
+        <p class="text-xs font-bold uppercase tracking-widest text-tan mb-3">Partner offers</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <article class="bg-white text-ink rounded-lg overflow-hidden shadow-lg flex flex-col">
+                <img src="https://www.etowine.com/cdn/shop/files/The_perfect_gift_mkII.jpg" alt="Wine bottles and glasses" class="w-full h-20 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+                <div class="p-4 flex flex-col flex-grow">
+                    <p class="text-xs font-bold uppercase tracking-widest text-rust mb-1">ETO - our Official Wine Accessories Partner</p>
+                    <h3 class="text-lg font-bold text-burgundy mb-1">15% off wine preservation</h3>
+                    <p class="text-xs text-gray-600 mb-3 flex-grow">Enjoy 15% off an ETO decanter and keep every bottle tasting at its best.</p>
+                    <a href="https://www.etowine.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold uppercase tracking-wider text-teal hover:text-rust transition">Shop ETO &rarr;</a>
+                </div>
+            </article>
+
+            <article class="bg-white text-ink rounded-lg overflow-hidden shadow-lg flex flex-col">
+                <img src="https://www.corneyandbarrow.com/media/wysiwyg/c_b_delivery_and_returns_policy.jpg" alt="Selection of wine bottles" class="w-full h-20 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+                <div class="p-4 flex flex-col flex-grow">
+                    <p class="text-xs font-bold uppercase tracking-widest text-rust mb-1">Corney &amp; Barrow - Our Official Wine Partner</p>
+                    <h3 class="text-lg font-bold text-burgundy mb-1">The series wine case</h3>
+                    <p class="text-xs text-gray-600 mb-3 flex-grow">Discover a limited-edition case of wines selected from the Vintage Politics series.</p>
+                    <a href="https://www.corneyandbarrow.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold uppercase tracking-wider text-teal hover:text-rust transition">Explore the case &rarr;</a>
+                </div>
+            </article>
+
+            <article class="bg-cream text-ink rounded-lg overflow-hidden shadow-lg border-2 border-rust flex flex-col">
+                <img src="/img/club/VintagePolitics_Cheers_Round_Burgundy.png" alt="People enjoying an intimate restaurant table" class="w-full h-20 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+                <div class="p-4 flex flex-col flex-grow">
+                    <p class="text-xs font-bold uppercase tracking-widest text-rust mb-1">BECOME A MEMBER</p>
+                    <h3 class="text-lg font-bold text-burgundy mb-1">Join The Vintage Politics Club</h3>
+                    <p class="text-xs text-gray-700 mb-3 flex-grow">Access exclusive tastings, discounts with our partners and breaking guest news ahead of the show.</p>
+                    <a href="club.html" class="text-xs font-bold uppercase tracking-wider text-teal hover:text-rust transition">JOIN NOW &rarr;</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<div class="max-w-7xl mx-auto px-4 py-16">
+    <!-- Latest Episode -->
+    <section id="latest" class="mb-20">
+        <h2 class="text-3xl font-bold text-burgundy mb-6 uppercase tracking-wider">Latest Episode: James Lyons</h2>
+        <div class="bg-white rounded-lg shadow-xl overflow-hidden border border-tan/30">
+            <div class="aspect-w-16 aspect-h-9 bg-ink relative" style="padding-top: 56.25%;">
+                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/GwqIO19rNc0?si=MQGjkwZTJkgyESQ-" title="Vintage Politics Latest Episode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+            <div class="p-6">
+                <h3 class="text-2xl font-bold text-ink mb-2"><a href="episode-james-lyons.html" class="hover:text-rust transition">A Vintage Politics Special &rarr;</a></h3>
+                <p class="text-gray-700 mb-4">James Lyons, Starmer's former Director of Strategic Communications, joins Abbie to unpack the political landscape over an exceptional vintage.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- The Format -->
+    <section class="mb-20 bg-teal text-cream p-10 rounded-lg text-center shadow-lg">
+        <h2 class="text-3xl font-bold mb-4 uppercase tracking-wider">The Format</h2>
+        <p class="text-lg max-w-3xl mx-auto">Wines are chosen to mark key moments in each guest's story, before the episode ends with their birth-year vintage. The challenge? Guess what their own vintage is worth…</p>
+    </section>
+</div>
+
+<!-- Carousel Script -->
+<script>
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    let activeSlide = 0;
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        window.setInterval(() => {
+            heroSlides[activeSlide].classList.remove('active');
+            activeSlide = (activeSlide + 1) % heroSlides.length;
+            heroSlides[activeSlide].classList.add('active');
+        }, 18000);
+    }
+</script>

@@ -1,0 +1,39 @@
+---
+layout: base.njk
+title: Episodes
+permalink: episodes.html
+---
+<div class="max-w-7xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-teal mb-6 uppercase tracking-wide border-b border-teal pb-4">Episodes</h1>
+    
+    <!-- AUTOMATED NAVIGATION LINKS -->
+    <nav aria-label="Episode sections" class="flex flex-wrap items-center gap-3 mb-12 text-sm font-bold uppercase tracking-wider">
+        {% for seasonGroup in collections.episodesBySeason %}
+        <a href="#{{ seasonGroup.title | slugify }}" class="text-rust hover:text-teal transition">{{ seasonGroup.title }}</a>
+        {% if not loop.last %}<span class="text-tan" aria-hidden="true">|</span>{% endif %}
+        {% endfor %}
+    </nav>
+
+    <!-- AUTOMATED SECTIONS & GRIDS -->
+    {% for seasonGroup in collections.episodesBySeason %}
+    <section id="{{ seasonGroup.title | slugify }}" class="scroll-mt-24 mb-16">
+        <h2 class="text-3xl font-bold text-burgundy mb-6 uppercase tracking-wide">{{ seasonGroup.title }}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            {% for ep in seasonGroup.episodes %}
+            <article class="bg-white p-6 rounded-lg shadow-lg border border-tan/30 flex flex-col">
+                <div class="aspect-w-16 aspect-h-9 bg-ink mb-4 rounded overflow-hidden relative" style="padding-top: 56.25%;">
+                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/{{ ep.data.youtube_id }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+                <h2 class="text-2xl font-bold text-burgundy mb-2 uppercase">
+                    <a href="{{ ep.url }}" class="hover:text-rust transition">{{ ep.data.title }}</a>
+                </h2>
+                <p class="text-gray-700 mb-4 flex-grow">{{ ep.data.short_bio }}</p>
+            </article>
+            {% endfor %}
+
+        </div>
+    </section>
+    {% endfor %}
+
+</div>

@@ -1,0 +1,42 @@
+---
+layout: base.njk
+title: Contact
+permalink: contact.html
+---
+<div class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-burgundy mb-6 uppercase tracking-wide">Get in Touch</h1>
+    <p class="text-lg text-ink mb-10">Use the form below for general enquiries, guest representation, partnerships, or press media.</p>
+    
+    <form action="https://api.web3forms.com/submit" method="POST" class="bg-white p-8 rounded-lg shadow-lg border border-tan/30">
+        <!-- Remember to add your real Web3Forms access key here! -->
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+        <div class="mb-6">
+            <label for="enquiry-type" class="block text-sm font-bold text-teal mb-2 uppercase tracking-wide">Nature of Enquiry</label>
+            <select id="enquiry-type" name="enquiry-type" class="w-full px-4 py-2 border border-tan rounded focus:outline-none bg-cream/30">
+                <option value="General">General Enquiry</option>
+                <option value="Guest">Guest Representation</option>
+                <option value="Partnership">Partnership / Sponsorship</option>
+                <option value="Press">Press / Media</option>
+            </select>
+        </div>
+
+        <div class="mb-6">
+            <label for="name" class="block text-sm font-bold text-teal mb-2 uppercase tracking-wide">Name</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-tan rounded focus:outline-none bg-cream/30">
+        </div>
+
+        <div class="mb-6">
+            <label for="email" class="block text-sm font-bold text-teal mb-2 uppercase tracking-wide">Email</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-tan rounded focus:outline-none bg-cream/30">
+        </div>
+
+        <div class="mb-6">
+            <label for="message" class="block text-sm font-bold text-teal mb-2 uppercase tracking-wide">Message</label>
+            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-tan rounded focus:outline-none bg-cream/30"></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-burgundy text-white font-bold py-3 px-4 rounded hover:bg-teal transition uppercase tracking-widest">Send Message</button>
+    </form>
+</div>

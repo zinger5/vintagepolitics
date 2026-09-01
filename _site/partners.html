@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partners | Vintage Politics</title>
+    <link rel="stylesheet" href="https://use.typekit.net/rxx7bfh.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { burgundy: '#401125', teal: '#305450', cream: '#E5DCD7', rust: '#BF6536', tan: '#CB997E', ink: '#02020A' }, fontFamily: { sans: ['"futura-pt"', 'ui-sans-serif', 'system-ui', 'sans-serif'] } } } }</script>
+</head>
+<body class="bg-cream text-ink font-sans antialiased flex flex-col min-h-screen overflow-y-scroll">
+    
+    <!-- GLOBAL NAVIGATION -->
+    <nav class="bg-burgundy text-cream p-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="/index.html" class="text-2xl font-bold tracking-widest uppercase"><span class="font-light">Vintage</span> <span class="font-bold">Politics</span></a>
+            <ul class="hidden lg:flex space-x-6 uppercase text-sm tracking-wider font-semibold items-center">
+                <li><a href="/index.html" class="hover:text-tan transition">Home</a></li>
+                <li><a href="/episodes.html" class="hover:text-tan transition">Episodes</a></li>
+                <li><a href="/guests.html" class="hover:text-tan transition">Guests</a></li>
+                <li><a href="/about.html" class="hover:text-tan transition">About</a></li>
+                <li><a href="/club.html" class="hover:text-tan transition">Club</a></li>
+                <li><a href="/partners.html" class="hover:text-tan transition">Partners</a></li>
+                <li><a href="/contact.html" class="hover:text-tan transition">Contact</a></li>
+                <li class="pl-4 border-l border-cream/30"><a href="https://www.youtube.com/@VintagePoliticsPod" target="_blank" rel="noopener noreferrer" class="bg-rust text-white px-4 py-2 rounded text-xs font-bold hover:bg-white hover:text-rust transition">Watch</a></li>
+                <li><a href="https://open.spotify.com/show/7LrEF4uSBQSopMZE3DNaan" target="_blank" rel="noopener noreferrer" class="bg-teal text-white px-4 py-2 rounded text-xs font-bold hover:bg-white hover:text-teal transition">Listen</a></li>
+            </ul>
+            <button class="lg:hidden block text-cream focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <ul id="mobile-menu" class="hidden lg:hidden mt-4 flex flex-col space-y-3 text-center uppercase text-sm font-semibold pb-4">
+            <li><a href="/index.html" class="block hover:text-tan transition">Home</a></li>
+            <li><a href="/episodes.html" class="block hover:text-tan transition">Episodes</a></li>
+            <li><a href="/guests.html" class="block hover:text-tan transition">Guests</a></li>
+            <li><a href="/about.html" class="block hover:text-tan transition">About</a></li>
+            <li><a href="/club.html" class="block hover:text-tan transition">Club</a></li>
+            <li><a href="/partners.html" class="block hover:text-tan transition">Partners</a></li>
+            <li><a href="/contact.html" class="block hover:text-tan transition">Contact</a></li>
+            <li class="pt-2 flex justify-center space-x-2">
+                <a href="https://www.youtube.com/@VintagePoliticsPod" target="_blank" rel="noopener noreferrer" class="bg-rust text-white px-4 py-2 rounded text-xs font-bold">Watch</a>
+                <a href="https://open.spotify.com/show/7LrEF4uSBQSopMZE3DNaan" target="_blank" rel="noopener noreferrer" class="bg-teal text-white px-4 py-2 rounded text-xs font-bold">Listen</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- UNIQUE PAGE CONTENT GOES HERE -->
+    <main class="flex-grow w-full">
+        <div class="flex-grow max-w-7xl mx-auto w-full px-4 py-12">
+    <h1 class="text-4xl font-bold text-teal mb-6 uppercase tracking-wide text-center">Our Partners</h1>
+    <p class="text-lg text-ink mb-12 max-w-2xl mx-auto text-center">Vintage Politics is made possible through the support of esteemed partners who share our commitment to quality conversation.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
+        <div class="bg-white p-8 rounded-lg shadow-md border border-tan/30 text-center">
+            <img src="https://www.corneyandbarrow.com/media/wysiwyg/c_b_delivery_and_returns_policy.jpg" alt="Wine delivery" class="w-full h-52 object-cover rounded mb-6 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+            <h3 class="text-2xl font-bold text-burgundy uppercase mb-2"><a href="https://www.corneyandbarrow.com/" target="_blank" rel="noopener noreferrer" class="hover:text-rust transition">Corney & Barrow</a></h3>
+            <p class="text-gray-600">Proud partners for Series Two, providing exceptional wine curation.</p>
+            <a href="https://www.corneyandbarrow.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-5 text-sm font-bold text-rust uppercase tracking-wider hover:text-teal transition">Visit website &rarr;</a>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-md border border-tan/30 text-center">
+            <img src="https://www.etowine.com/cdn/shop/files/The_perfect_gift_mkII.jpg" alt="Wine bottles and glasses" class="w-full h-52 object-cover rounded mb-6 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+            <h3 class="text-2xl font-bold text-teal uppercase mb-2"><a href="https://www.etowine.com/" target="_blank" rel="noopener noreferrer" class="hover:text-rust transition">ETO</a></h3>
+            <p class="text-gray-600">An elegant wine decanter and patented preservation system, keeping wine fresh and full of flavour for longer.</p>
+            <a href="https://www.etowine.com/" target="_blank" rel="noopener noreferrer" class="inline-block mt-5 text-sm font-bold text-rust uppercase tracking-wider hover:text-teal transition">Visit website &rarr;</a>
+        </div>
+    </div>
+
+    <div class="bg-cream/50 p-10 rounded-lg border border-tan/50 text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-burgundy mb-4 uppercase">Work with Vintage Politics</h2>
+        <p class="mb-6">We are open to sponsorship, episode partnerships, live events, and bespoke collaborations.</p>
+        <a href="contact.html" class="inline-block bg-teal text-white font-bold py-3 px-6 rounded uppercase tracking-wider hover:bg-ink transition">Contact Partnerships</a>
+    </div>
+
+    <section class="mt-20">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-teal uppercase tracking-wide mb-4">Our Hosts</h2>
+            <p class="text-lg text-ink max-w-3xl mx-auto">Vintage Politics has been hosted by fabulous venues which share our passion for incredible wines. Check them out below.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <article class="bg-white rounded-lg shadow-md border border-tan/30 overflow-hidden text-center">
+                <img src="https://hide.co.uk/wp-content/uploads/2025/03/4d9855f21a6a28f3afbf60b559557428.jpg?q=80&w=1000&auto=format&fit=crop" alt="Interior of a refined restaurant" class="w-full h-56 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-burgundy uppercase mb-3"><a href="https://www.hide.co.uk/" target="_blank" rel="noopener noreferrer" class="hover:text-rust transition">Hide Restaurant Mayfair</a></h3>
+                    <a href="https://www.hide.co.uk/" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-rust uppercase tracking-wider hover:text-teal transition">Visit website &rarr;</a>
+                </div>
+            </article>
+            <article class="bg-white rounded-lg shadow-md border border-tan/30 overflow-hidden text-center">
+                <img src="https://www.quovadissoho.co.uk/wp-content/uploads/2016/11/Screen-Shot-2017-02-09-at-16.27.45-1-e1486658155879.png" alt="Elegant restaurant dining room" class="w-full h-56 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-burgundy uppercase mb-3"><a href="https://www.quovadissoho.co.uk/" target="_blank" rel="noopener noreferrer" class="hover:text-rust transition">Quo Vadis</a></h3>
+                    <a href="https://www.quovadissoho.co.uk/" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-rust uppercase tracking-wider hover:text-teal transition">Visit website &rarr;</a>
+                </div>
+            </article>
+            <article class="bg-white rounded-lg shadow-md border border-tan/30 overflow-hidden text-center">
+                <img src="https://www.gordonramsayrestaurants.com/assets/Uploads/_resampled/CroppedFocusedImage1920108050-59-vb1936144-GRSavoy1890Jan202225-1.jpg" alt="Fine dining restaurant interior" class="w-full h-56 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-burgundy uppercase mb-3"><a href="https://www.gordonramsayrestaurants.com/restaurants/restaurant-1890/" target="_blank" rel="noopener noreferrer" class="hover:text-rust transition">Restaurant 1890 by Gordon Ramsay at The Savoy</a></h3>
+                    <a href="https://www.gordonramsayrestaurants.com/restaurants/restaurant-1890/" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-rust uppercase tracking-wider hover:text-teal transition">Visit website &rarr;</a>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>
+    </main>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="bg-ink text-cream pt-12 pb-6 border-t border-tan/20 mt-auto">
+        <div class="text-center text-xs opacity-50 uppercase tracking-widest pt-6">&copy; 2026 Vintage Politics Ltd. All rights reserved.</div>
+    </footer>
+</body>
+</html>

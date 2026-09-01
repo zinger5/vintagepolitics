@@ -1,0 +1,134 @@
+---
+layout: base.njk
+---
+<main class="flex-grow max-w-5xl mx-auto w-full px-4 py-12">
+    <!-- EPISODE HEADER -->
+    <div class="mb-8">
+        <a href="episodes.html" class="text-sm font-bold text-rust hover:text-teal transition uppercase tracking-wider mb-2 inline-block">&larr; Back to Archive</a>
+        <h1 class="text-4xl md:text-5xl font-bold text-burgundy uppercase tracking-wide">{{ title }}</h1>
+        <p class="text-xl text-teal mt-2">{{ season_info }}</p>
+    </div>
+
+    <!-- YOUTUBE PLAYER -->
+    <div class="bg-white rounded-lg shadow-xl overflow-hidden border border-tan/30 mb-8">
+        <div class="aspect-w-16 aspect-h-9 bg-ink relative" style="padding-top: 56.25%;">
+            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/{{ youtube_id }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-12">
+        <!-- LEFT COLUMN: EPISODE INFO & GUEST BIO -->
+        <div class="w-full md:w-3/5">
+            <h2 class="text-2xl font-bold text-teal mb-4 uppercase tracking-wide">The Episode</h2>
+            <div class="text-lg text-ink mb-8 leading-relaxed">
+                {{ content | safe }}
+            </div>
+            
+            <div class="bg-cream/50 border border-tan/30 p-6 rounded-lg mb-8">
+                <h3 class="text-xl font-bold text-burgundy mb-4 uppercase">About {{ title }}</h3>
+                <img src="{{ image_path }}" alt="Portrait of {{ title }}" class="w-full h-64 object-cover rounded mb-4 shadow-sm grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+                <p class="text-ink text-sm leading-relaxed">{{ short_bio }}</p>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN: THE WINES SIDEBAR -->
+        <div class="w-full md:w-2/5">
+            <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-rust sticky top-24">
+                <h2 class="text-2xl font-bold text-burgundy mb-6 uppercase tracking-wide">The Wines</h2>
+                <p class="text-sm text-gray-600 mb-6 italic">The specific vintages chosen to map the defining years of {{ title }}'s career.</p>
+
+                <!-- MAIN WINE LIST VIEW -->
+                <div id="wine-list-view" class="wine-panel transition-opacity duration-400">
+                    <ul class="space-y-6">
+                        {% for wine in wines %}
+                        <li class="border-b border-tan/30 pb-4 last:border-0 last:pb-0">
+                            <span class="block text-xs font-bold text-rust uppercase tracking-wider mb-1">{{ wine.label }}</span>
+                            <h4 class="text-lg font-bold text-ink mb-1">
+                                {% if wine.has_facts %}
+                                <button type="button" class="text-left group inline-flex flex-wrap items-center gap-2" onclick="showWineDetail('{{ wine.name | slugify }}-detail')">
+                                    <span class="hover:text-rust transition underline decoration-tan/50 decoration-2 underline-offset-4 group-hover:decoration-rust">{{ wine.name }}</span>
+                                    <span class="text-[10px] font-bold bg-rust/10 text-rust px-2 py-0.5 rounded uppercase tracking-widest group-hover:bg-rust group-hover:text-white transition-colors duration-300">View Facts &rarr;</span>
+                                </button>
+                                {% else %}
+                                {{ wine.name }}
+                                {% endif %}
+                            </h4>
+                            <p class="text-sm text-gray-500">
+                                {% if wine.supplier_url and wine.supplier_url != 'N/A' and wine.supplier_url != '#' %}
+                                <a href="{{ wine.supplier_url }}" target="_blank" rel="noopener noreferrer" class="hover:text-rust transition">{{ wine.supplier }}</a>
+                                {% else %}
+                                {{ wine.supplier }}
+                                {% endif %}
+                                {% if wine.vintage %} | {{ wine.vintage }}{% endif %}
+                                {% if wine.price %} | {{ wine.price }}{% endif %}
+                            </p>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- DETAIL PANELS FOR WINES WITH HAS_FACTS: TRUE -->
+                {% for wine in wines %}
+                {% if wine.has_facts %}
+                <div id="{{ wine.name | slugify }}-detail" class="wine-panel hidden opacity-0 transition-opacity duration-400" aria-hidden="true">
+                    <button type="button" class="text-sm font-bold text-rust hover:text-teal transition uppercase tracking-wider mb-6" onclick="showWineList('{{ wine.name | slugify }}-detail')">&larr; Back to list</button>
+                    {% if wine.image %}
+                    <img src="{{ wine.image }}" alt="Bottle of {{ wine.name }}" class="w-full max-h-72 object-contain mb-6">
+                    {% endif %}
+                    <h2 class="text-2xl font-bold text-burgundy uppercase tracking-wide mb-5">{{ wine.name }}</h2>
+                    <dl class="space-y-3 text-sm text-gray-700">
+                        <div>
+                            <dt class="font-bold text-teal uppercase tracking-wider">Supplier</dt>
+                            <dd>
+                                {% if wine.supplier_url and wine.supplier_url != 'N/A' and wine.supplier_url != '#' %}
+                                <a href="{{ wine.supplier_url }}" target="_blank" rel="noopener noreferrer" class="text-rust hover:text-teal transition underline underline-offset-2">{{ wine.supplier }}</a>
+                                {% else %}
+                                {{ wine.supplier }}
+                                {% endif %}
+                            </dd>
+                        </div>
+                        {% if wine.location %}<div><dt class="font-bold text-teal uppercase tracking-wider">Location</dt><dd>{{ wine.location }}</dd></div>{% endif %}
+                        {% if wine.producer %}<div><dt class="font-bold text-teal uppercase tracking-wider">Producer</dt><dd>{{ wine.producer }}</dd></div>{% endif %}
+                        {% if wine.grapes %}<div><dt class="font-bold text-teal uppercase tracking-wider">Grapes</dt><dd>{{ wine.grapes }}</dd></div>{% endif %}
+                        {% if wine.alcohol %}<div><dt class="font-bold text-teal uppercase tracking-wider">Alcohol</dt><dd>{{ wine.alcohol }}</dd></div>{% endif %}
+                        {% if wine.profile %}<div><dt class="font-bold text-teal uppercase tracking-wider">Flavour profile</dt><dd>{{ wine.profile }}</dd></div>{% endif %}
+                        {% if wine.notes %}<div><dt class="font-bold text-teal uppercase tracking-wider">Abbie's tasting notes</dt><dd>{{ wine.notes }}</dd></div>{% endif %}
+                    </dl>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- INTERACTIVE TOGGLE SCRIPT -->
+<script>
+    function showWineDetail(detailId) {
+        const listView = document.getElementById('wine-list-view');
+        const detailView = document.getElementById(detailId);
+        if (!listView || !detailView) return;
+        
+        listView.classList.add('opacity-0', 'pointer-events-none');
+        window.setTimeout(() => {
+            listView.classList.add('hidden');
+            detailView.classList.remove('hidden', 'pointer-events-none');
+            detailView.removeAttribute('aria-hidden');
+            window.requestAnimationFrame(() => detailView.classList.remove('opacity-0'));
+        }, 400);
+    }
+
+    function showWineList(activeDetailId) {
+        const listView = document.getElementById('wine-list-view');
+        const detailView = document.getElementById(activeDetailId);
+        if (!listView || !detailView) return;
+
+        detailView.classList.add('opacity-0', 'pointer-events-none');
+        window.setTimeout(() => {
+            detailView.classList.add('hidden');
+            detailView.setAttribute('aria-hidden', 'true');
+            listView.classList.remove('hidden');
+            window.requestAnimationFrame(() => listView.classList.remove('opacity-0', 'pointer-events-none'));
+        }, 400);
+    }
+</script>

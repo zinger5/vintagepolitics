@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Vintage Politics</title>
+    <link rel="stylesheet" href="https://use.typekit.net/rxx7bfh.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { burgundy: '#401125', teal: '#305450', cream: '#E5DCD7', rust: '#BF6536', tan: '#CB997E', ink: '#02020A' }, fontFamily: { sans: ['"futura-pt"', 'ui-sans-serif', 'system-ui', 'sans-serif'] } } } }</script>
+</head>
+<body class="bg-cream text-ink font-sans antialiased flex flex-col min-h-screen overflow-y-scroll">
+    
+    <!-- GLOBAL NAVIGATION -->
+    <nav class="bg-burgundy text-cream p-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="/index.html" class="text-2xl font-bold tracking-widest uppercase"><span class="font-light">Vintage</span> <span class="font-bold">Politics</span></a>
+            <ul class="hidden lg:flex space-x-6 uppercase text-sm tracking-wider font-semibold items-center">
+                <li><a href="/index.html" class="hover:text-tan transition">Home</a></li>
+                <li><a href="/episodes.html" class="hover:text-tan transition">Episodes</a></li>
+                <li><a href="/guests.html" class="hover:text-tan transition">Guests</a></li>
+                <li><a href="/about.html" class="hover:text-tan transition">About</a></li>
+                <li><a href="/club.html" class="hover:text-tan transition">Club</a></li>
+                <li><a href="/partners.html" class="hover:text-tan transition">Partners</a></li>
+                <li><a href="/contact.html" class="hover:text-tan transition">Contact</a></li>
+                <li class="pl-4 border-l border-cream/30"><a href="https://www.youtube.com/@VintagePoliticsPod" target="_blank" rel="noopener noreferrer" class="bg-rust text-white px-4 py-2 rounded text-xs font-bold hover:bg-white hover:text-rust transition">Watch</a></li>
+                <li><a href="https://open.spotify.com/show/7LrEF4uSBQSopMZE3DNaan" target="_blank" rel="noopener noreferrer" class="bg-teal text-white px-4 py-2 rounded text-xs font-bold hover:bg-white hover:text-teal transition">Listen</a></li>
+            </ul>
+            <button class="lg:hidden block text-cream focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <ul id="mobile-menu" class="hidden lg:hidden mt-4 flex flex-col space-y-3 text-center uppercase text-sm font-semibold pb-4">
+            <li><a href="/index.html" class="block hover:text-tan transition">Home</a></li>
+            <li><a href="/episodes.html" class="block hover:text-tan transition">Episodes</a></li>
+            <li><a href="/guests.html" class="block hover:text-tan transition">Guests</a></li>
+            <li><a href="/about.html" class="block hover:text-tan transition">About</a></li>
+            <li><a href="/club.html" class="block hover:text-tan transition">Club</a></li>
+            <li><a href="/partners.html" class="block hover:text-tan transition">Partners</a></li>
+            <li><a href="/contact.html" class="block hover:text-tan transition">Contact</a></li>
+            <li class="pt-2 flex justify-center space-x-2">
+                <a href="https://www.youtube.com/@VintagePoliticsPod" target="_blank" rel="noopener noreferrer" class="bg-rust text-white px-4 py-2 rounded text-xs font-bold">Watch</a>
+                <a href="https://open.spotify.com/show/7LrEF4uSBQSopMZE3DNaan" target="_blank" rel="noopener noreferrer" class="bg-teal text-white px-4 py-2 rounded text-xs font-bold">Listen</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- UNIQUE PAGE CONTENT GOES HERE -->
+    <main class="flex-grow w-full">
+        <div class="max-w-5xl mx-auto px-4 py-12">
+    <div class="flex flex-col md:flex-row gap-12 items-start">
+        <div class="w-full md:w-1/2">
+            <h1 class="text-4xl font-bold text-burgundy mb-6 uppercase tracking-wide">The Story</h1>
+            <p class="text-lg text-ink mb-4 leading-relaxed">Vintage Politics brings together politics, journalism, public life and wine. Each guest reflects on the moments that shaped their life and career, with wines chosen to mark those defining years.</p>
+            <p class="text-lg text-ink mb-4 leading-relaxed">The result is a different kind of conversation — one that moves beyond the usual soundbites to reveal the stories, memories and personalities behind public life.</p>
+            <p class="text-lg text-ink mb-8 leading-relaxed">Every vintage tells a story. So does every guest.</p>
+            
+            <h2 class="text-2xl font-bold text-teal mb-3 uppercase tracking-wide border-t border-tan pt-6">Abbie Bennington</h2>
+            <p class="text-ink leading-relaxed mb-4">Creator and host of Vintage Politics, Abbie is a journalist, broadcaster and wine expert. A former BBC News at Ten senior producer, she also worked alongside Nick Robinson during his time as BBC Political Editor.</p>
+            <ul class="list-disc pl-5 space-y-2 text-ink">
+                <li>WSET Diploma holder</li>
+                <li>Wine writer, educator and judge</li>
+                <li>Chair of the Association of Wine Educators</li>
+                <li>President of the London Tasting Awards 2026</li>
+                <li>Bordeaux Wine School accredited tutor</li>
+                <li>Rioja Educator</li>
+                <li>Cava DO Advanced Educator</li>
+            </ul>
+        </div>
+        <div class="w-full md:w-1/2">
+            <!-- Add Abbie's portrait image path to the style attribute below -->
+            <div class="aspect-w-3 aspect-h-4 bg-gray-300 rounded-lg shadow-xl flex items-center justify-center text-ink overflow-hidden bg-cover bg-center" style="background-image: url('placeholder.jpg');">
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="bg-ink text-cream pt-12 pb-6 border-t border-tan/20 mt-auto">
+        <div class="text-center text-xs opacity-50 uppercase tracking-widest pt-6">&copy; 2026 Vintage Politics Ltd. All rights reserved.</div>
+    </footer>
+</body>
+</html>
