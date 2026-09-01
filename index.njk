@@ -54,6 +54,26 @@ format_section:
         .hero-slide { transition: none; }
         .hero-slide.active { opacity: 1; }
     }
+    
+    /* Swiper Navigation Button Styling */
+    .offers-swiper .swiper-button-next,
+    .offers-swiper .swiper-button-prev {
+        color: #FDFBF7; /* cream */
+        background-color: rgba(43, 89, 93, 0.8); /* teal with opacity */
+        width: 40px;
+        height: 40px;
+        border-radius: 9999px;
+        transition: background-color 0.2s ease;
+    }
+    .offers-swiper .swiper-button-next:after,
+    .offers-swiper .swiper-button-prev:after {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .offers-swiper .swiper-button-next:hover,
+    .offers-swiper .swiper-button-prev:hover {
+        background-color: #A03D49; /* burgundy */
+    }
 </style>
 
 <!-- Hero Section -->
@@ -76,7 +96,7 @@ format_section:
 </section>
 
 <!-- Listener Offers Section -->
-<section aria-labelledby="listener-offers" class="bg-teal text-cream px-4 py-5">
+<section aria-labelledby="listener-offers" class="bg-teal text-cream px-4 py-5 overflow-hidden">
     <div class="max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-2 mb-4">
             <div>
@@ -87,28 +107,51 @@ format_section:
         </div>
 
         <p class="text-xs font-bold uppercase tracking-widest text-tan mb-3">Partner offers</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {% for offer in offers %}
-            <article class="bg-white text-ink rounded-lg overflow-hidden shadow-lg flex flex-col">
-                <img src="{{ offer.image }}" alt="Partner image" class="w-full h-20 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out" />
-                <div class="p-4 flex flex-col flex-grow">
-                    <p class="text-xs font-bold uppercase tracking-widest text-rust mb-1">{{ offer.eyebrow }}</p>
-                    <h3 class="text-lg font-bold text-burgundy mb-1">{{ offer.title }}</h3>
-                    <p class="text-xs text-gray-600 mb-3 flex-grow">{{ offer.description }}</p>
-                    <a href="{{ offer.link_url }}" target="_blank" rel="noopener noreferrer" class="text-xs font-bold uppercase tracking-wider text-teal hover:text-rust transition">{{ offer.link_text | safe }}</a>
-                </div>
-            </article>
-            {% endfor %}
+        
+        <!-- Swiper Carousel Outer Container with Side Controls and Fades -->
+        <div class="relative px-6">
+            
+            <!-- Left & Right Gradient Overlay Fades (Matches bg-teal) -->
+            <div class="absolute top-0 left-0 bottom-0 w-16 bg-gradient-to-r from-teal to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute top-0 right-0 bottom-0 w-16 bg-gradient-to-l from-teal to-transparent z-10 pointer-events-none"></div>
 
-            <article class="bg-cream text-ink rounded-lg overflow-hidden shadow-lg border-2 border-rust flex flex-col">
-                <img src="{{ club_offer.image }}" alt="Club image" class="w-full h-20 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out" />
-                <div class="p-4 flex flex-col flex-grow">
-                    <p class="text-xs font-bold uppercase tracking-widest text-rust mb-1">{{ club_offer.eyebrow }}</p>
-                    <h3 class="text-lg font-bold text-burgundy mb-1">{{ club_offer.title }}</h3>
-                    <p class="text-xs text-gray-700 mb-3 flex-grow">{{ club_offer.description }}</p>
-                    <a href="{{ club_offer.link_url }}" class="text-xs font-bold uppercase tracking-wider text-teal hover:text-rust transition">{{ club_offer.link_text | safe }}</a>
+            <!-- Main Swiper Container -->
+            <div class="swiper offers-swiper overflow-hidden">
+                <div class="swiper-wrapper">
+                    
+                    {% for offer in offers %}
+                    <div class="swiper-slide h-auto">
+                        <article class="bg-white text-ink rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
+                            <img src="{{ offer.image }}" alt="Partner image" class="w-full h-20 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out" />
+                            <div class="p-4 flex flex-col flex-grow">
+                                <p class="text-xs font-bold uppercase tracking-widest text-rust mb-1">{{ offer.eyebrow }}</p>
+                                <h3 class="text-lg font-bold text-burgundy mb-1">{{ offer.title }}</h3>
+                                <p class="text-xs text-gray-600 mb-3 flex-grow">{{ offer.description }}</p>
+                                <a href="{{ offer.link_url }}" target="_blank" rel="noopener noreferrer" class="text-xs font-bold uppercase tracking-wider text-teal hover:text-rust transition">{{ offer.link_text | safe }}</a>
+                            </div>
+                        </article>
+                    </div>
+                    {% endfor %}
+
+                    <!-- Club Offer Slide -->
+                    <div class="swiper-slide h-auto">
+                        <article class="bg-cream text-ink rounded-lg overflow-hidden shadow-lg border-2 border-rust flex flex-col h-full">
+                            <img src="{{ club_offer.image }}" alt="Club image" class="w-full h-20 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out" />
+                            <div class="p-4 flex flex-col flex-grow">
+                                <p class="text-xs font-bold uppercase tracking-widest text-rust mb-1">{{ club_offer.eyebrow }}</p>
+                                <h3 class="text-lg font-bold text-burgundy mb-1">{{ club_offer.title }}</h3>
+                                <p class="text-xs text-gray-700 mb-3 flex-grow">{{ club_offer.description }}</p>
+                                <a href="{{ club_offer.link_url }}" class="text-xs font-bold uppercase tracking-wider text-teal hover:text-rust transition">{{ club_offer.link_text | safe }}</a>
+                            </div>
+                        </article>
+                    </div>
+
                 </div>
-            </article>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="swiper-button-prev !-left-2 z-20"></div>
+            <div class="swiper-button-next !-right-2 z-20"></div>
         </div>
     </div>
 </section>
@@ -135,8 +178,9 @@ format_section:
     </section>
 </div>
 
-<!-- Carousel Script -->
+<!-- Scripts -->
 <script>
+    // Hero Slideshow Script
     const heroSlides = document.querySelectorAll('.hero-slide');
     let activeSlide = 0;
 
@@ -147,4 +191,28 @@ format_section:
             heroSlides[activeSlide].classList.add('active');
         }, 18000);
     }
+
+    // Offers Swiper Script
+    document.addEventListener('DOMContentLoaded', function () {
+        const offersSwiper = new Swiper('.offers-swiper', {
+            loop: true,
+            centeredSlides: false,
+            spaceBetween: 16,
+            slidesPerView: 1.2, // Mobile default: 1 full card + partial edge
+            breakpoints: {
+                640: {
+                    slidesPerView: 2.2, // Tablet
+                    spaceBetween: 16
+                },
+                1024: {
+                    slidesPerView: 3.2, // Desktop: 3 cards in view + 4th partially visible
+                    spaceBetween: 20
+                }
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    });
 </script>
