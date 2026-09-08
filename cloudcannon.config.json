@@ -9,10 +9,7 @@
       "glob": "*.md",
       "name": "Episodes",
       "icon": "ondemand_video",
-      "disable_add_folder": true,
-      "create": {
-        "path": "episodes/{[title|slug]}.md"
-      },
+      "create": "schema",
       "schemas": {
         "default": {
           "name": "New Episode",
