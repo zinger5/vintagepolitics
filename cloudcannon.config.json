@@ -5,7 +5,13 @@
   },
   "collections_config": {
   "episodes": {
-    "path": "episodes"
+    "path": "episodes",
+    "schemas": {
+      "default": {
+        "path": "episodes/episode-james-lyons.html",
+        "name": "Default Episode"
+      }
+    } 
   },
   "pages": {
     "path": "",
