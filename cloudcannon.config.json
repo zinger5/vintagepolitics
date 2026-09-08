@@ -6,10 +6,18 @@
   "collections_config": {
   "episodes": {
     "path": "episodes",
+    "glob": "*.md",
     "schemas": {
       "default": {
-        "path": "episodes/episode-james-lyons.html",
-        "name": "Default Episode"
+        "name": "New Episode",
+        "value": {
+          "_schema": "default",
+            "title": "",
+            "youtube_id": "",
+            "episode_title": "",
+            "description": "",
+            "date": null
+        }
       }
     } 
   },
