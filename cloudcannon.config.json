@@ -4,34 +4,40 @@
     "static": ""
   },
   "collections_config": {
-  "episodes": {
-    "path": "episodes",
-    "glob": "*.md",
-    "schemas": {
-      "default": {
-        "name": "New Episode",
-        "value": {
-          "_schema": "default",
+    "episodes": {
+      "path": "episodes",
+      "glob": "*.md",
+      "name": "Episodes",
+      "icon": "ondemand_video",
+      "disable_add_folder": true,
+      "create": {
+        "path": "episodes/{[title|slug]}.md"
+      },
+      "schemas": {
+        "default": {
+          "name": "New Episode",
+          "value": {
+            "_schema": "default",
             "title": "",
             "youtube_id": "",
             "episode_title": "",
             "description": "",
             "date": null
+          }
         }
       }
-    } 
+    },
+    "pages": {
+      "path": "",
+      "glob": [
+        "*.njk",
+        "*.md",
+        "*.html"
+      ],
+      "name": "Pages",
+      "icon": "wysiwyg"
+    }
   },
-  "pages": {
-    "path": "",
-    "glob": [
-      "*.njk",
-      "*.md",
-      "*.html"
-    ],
-    "name": "Pages",
-    "icon": "wysiwyg"
-  }
-},
   "_inputs": {
     "date": {
       "type": "date"
@@ -49,20 +55,20 @@
         "item_name": "Wine"
       }
     },
-    "profile_image": { 
-        "type": "image" 
+    "profile_image": {
+      "type": "image"
     },
     "partners[*].image": {
-        "type": "image"
+      "type": "image"
     },
     "hosts[*].image": {
-        "type": "image"
+      "type": "image"
     },
     "offers[*].image": {
-        "type": "image"
+      "type": "image"
     },
     "club_offer.image": {
-        "type": "image"
+      "type": "image"
     }
   }
 }
