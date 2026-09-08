@@ -16,10 +16,10 @@
           "schema": "default"
         }
       ],
-      "create": "schema",
       "schemas": {
         "default": {
           "name": "New Episode",
+          "remove_extra_inputs": true,
           "value": {
             "_schema": "default",
             "title": "",
