@@ -9,6 +9,13 @@
       "glob": "*.md",
       "name": "Episodes",
       "icon": "ondemand_video",
+      "output": true,
+      "add_options": [
+        {
+          "name": "Add Episode",
+          "schema": "default"
+        }
+      ],
       "create": "schema",
       "schemas": {
         "default": {
