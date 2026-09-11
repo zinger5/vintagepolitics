@@ -37,7 +37,7 @@ wines:
     price: £240.00
   - label: Guto's Vintage
     name: Graham's Vintage Port
-    supplier: Ramsay Group / Graham's
+    supplier: Vintage Wine & Port
     supplier_url: https://www.vintagewineandport.co.uk/products/Grahams-1966-Vintage-Port-1
     vintage: '1966'
     price: £315.00
