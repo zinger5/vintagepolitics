@@ -20,7 +20,7 @@ wines:
     supplier: N/A
     supplier_url: https://hedonism.co.uk/products/cremant-d-alsace-hugel-2020
     vintage: '2019'
-    price: Price not listed
+    price: ~ £25.00
   - label: Wine 2
     name: Margaux du Château Margaux
     supplier: HIDE
@@ -38,11 +38,11 @@ wines:
       one of great quality and history. This wine didn’t disappoint rich with
       black fruit and chalky tannins this offering will last and last.
   - label: Wine 3
-    name: Château d'Yquem
+    name: Château Suduiraut
     supplier: HIDE
-    supplier_url: https://hedonism.co.uk/products/yquem-half-2007
+    supplier_url:
     vintage: '2007'
-    price: £185.00
+    price: £60.00
   - label: Vintage 1963
     name: Château Margaux
     supplier: HIDE
