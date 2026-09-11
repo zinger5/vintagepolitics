@@ -44,7 +44,7 @@ wines:
     vintage: '2007'
     price: £60.00
   - label: Nick's Vintage
-    name: Château Margaux
+    name: Château Margaux Premier Grand Cru Classé
     supplier: HIDE
     supplier_url: '#'
     vintage: '1963'
