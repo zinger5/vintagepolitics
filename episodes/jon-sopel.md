@@ -35,12 +35,6 @@ wines:
     profile: Blackcurrant, Cedar, Dark chocolate, Fine spice
     notes: A top Napa Valley producer making new world wines of the finest quality
       thanks to the king of grapes Cabernet Sauvignon.
-  - label: Wine 3
-    name: Château d'Yquem
-    supplier: HIDE
-    supplier_url: https://hedonism.co.uk/products/yquem-half-2007
-    vintage: '2007'
-    price: £185.00
   - label: Jon's Vintage - 1955
     name: Gérard Bertrand Legend Vintage Rivesaltes
     supplier: Gérard Bertrand
