@@ -15,11 +15,11 @@ wines:
     vintage: '2024'
     price: £10.75
   - label: Wine 1
-    name: Hugel Crémant d'Alsace
-    supplier: Hedonism
-    supplier_url: https://hedonism.co.uk/products/cremant-d-alsace-hugel-2020
-    vintage: '2019'
-    price: Price not listed
+    name: Pouilly-Fuissé, Pierre Desroches
+    supplier: Savoy Grill
+    supplier_url: https://www.hachette-vins.com/guide-vins/les-vins/dom-pierre-desroches-en-charmont-2023-2026/202685930/
+    vintage: '2023'
+    price: ~£40.00
   - label: Wine 2
     name: Ulysses
     supplier: Corney & Barrow
@@ -41,11 +41,11 @@ wines:
     supplier_url: https://hedonism.co.uk/products/yquem-half-2007
     vintage: '2007'
     price: £185.00
-  - label: Vintage 1963
-    name: Château Margaux
-    supplier: HIDE
-    supplier_url: '#'
+  - label: Jon's Vintage - 1955
+    name: Gérard Bertrand Legend Vintage Rivesaltes
+    supplier: Gérard Bertrand
+    supplier_url: https://www.gerard-bertrand.com/en/products/legend-vintage-natural-sweet-wines-1955-rivesaltes-75cl
     vintage: '1963'
-    price: No longer available
+    price: ~£526.00
 ---
 Jon Sopel joins Vintage Politics at Restaurant 1890 by Gordon Ramsay at The Savoy, reflecting on a career covering politics at home and abroad, from Westminster to Washington and his years reporting on the Trump presidency.
