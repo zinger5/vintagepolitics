@@ -19,7 +19,7 @@ wines:
     supplier: Hedonism
     supplier_url: https://www.bosiofranciacorta.it/english/franciacorta_extrabrut_boschedor.html
     vintage: '2015'
-    price: Price not listed
+    price: ~ £30.00
   - label: Wine 2
     name: Les Clos Peyrassol
     supplier: Majestic
