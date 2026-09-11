@@ -43,7 +43,7 @@ wines:
     supplier_url:
     vintage: '2007'
     price: £60.00
-  - label: Vintage 1963
+  - label: Nick's Vintage
     name: Château Margaux
     supplier: HIDE
     supplier_url: '#'
