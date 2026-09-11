@@ -35,7 +35,7 @@ wines:
     profile: Blackcurrant, Cedar, Dark chocolate, Fine spice
     notes: A top Napa Valley producer making new world wines of the finest quality
       thanks to the king of grapes Cabernet Sauvignon.
-  - label: Jon's Vintage - 1955
+  - label: Jon's Vintage
     name: Gérard Bertrand Legend Vintage Rivesaltes
     supplier: Gérard Bertrand
     supplier_url: https://www.gerard-bertrand.com/en/products/legend-vintage-natural-sweet-wines-1955-rivesaltes-75cl
