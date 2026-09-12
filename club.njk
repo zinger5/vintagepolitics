@@ -2,34 +2,37 @@
 layout: base.njk
 title: Club
 permalink: club.html
-hero_title: "The Vintage Politics Club"
-hero_subtitle: "Register your interest for our upcoming membership. Be the first to access extended content, advance guest news, wine recommendations, partner offers, and behind-the-scenes material."
+hero_title: The Vintage Politics Club
+hero_subtitle: Register your interest for our upcoming membership. Be the first
+  to access extended content, advance guest news, wine recommendations, partner
+  offers, and behind-the-scenes material.
 tier_1:
-  label: "Membership tier"
-  name: "The Lobby"
-  price: "£6"
-  period: "/month"
-  description: "For people who want to be closer to Vintage Politics."
+  label: Membership tier
+  name: The Lobby
+  price: £6
+  period: /month
+  description: For people who want to be closer to Vintage Politics.
   benefits:
-    - "Early access to episodes"
-    - "Members-only newsletter and behind-the-scenes updates"
-    - "Vote on future guests and submit questions"
-    - "15% off Académie du Vin books"
-    - "10% off Wine Scholar Guild courses"
-    - "Selected partner offers from Vintage Politics supporters"
+    - Early access to episodes
+    - Members-only newsletter and behind-the-scenes updates
+    - Vote on future guests and submit questions
+    - 15% off Académie du Vin books
+    - 10% off Wine Scholar Guild courses
+    - Selected partner offers from Vintage Politics supporters
 tier_2:
-  label: "Premium membership tier"
-  name: "The Cabinet"
-  price: "£15"
-  period: "/month"
-  description: "Everything in The Lobby, plus:"
+  label: Premium membership tier
+  name: The Cabinet
+  price: £15
+  period: /month
+  description: 'Everything in The Lobby, plus:'
   benefits:
-    - "An online tasting with host Abbie Bennington for you and up to 10 guests (not including wines) worth £500"
-    - "Members-only Q&As and conversations"
-    - "Regular and different wine offers and partner benefits"
-    - "Priority booking and preferential pricing for live events"
-    - "Curated wine recommendations linked to episodes"
-form_title: "Join the Waitlist"
+    - £50 monthly credit towards an online tasting with host Abbie Bennington
+      for you and up to 10 guests (not including wines)
+    - Members-only Q&As and conversations
+    - Regular and different wine offers and partner benefits
+    - Priority booking and preferential pricing for live events
+    - Curated wine recommendations linked to episodes
+form_title: Join the Waitlist
 ---
 <div class="max-w-4xl mx-auto w-full px-4 py-20 text-center">
     <h1 class="text-5xl font-bold text-burgundy mb-6 uppercase tracking-wide">{{ hero_title }}</h1>
@@ -68,12 +71,12 @@ form_title: "Join the Waitlist"
     <div class="bg-white p-10 rounded-lg shadow-2xl border-t-4 border-rust">
         <h2 class="text-3xl font-bold text-teal mb-4 uppercase">{{ form_title }}</h2>
         <form action="https://api.web3forms.com/submit" method="POST" class="max-w-md mx-auto">
-            <input type="hidden" name="access_key" value="e34d3866-72b4-46cc-aa7b-c9b6f7a750d3">
-            <input type="hidden" name="subject" value="Vintage Politics Club waitlist enquiry">
-            <input type="hidden" name="enquiry-type" value="Club waitlist">
-            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <input type="hidden" name="access_key" value="e34d3866-72b4-46cc-aa7b-c9b6f7a750d3" />
+            <input type="hidden" name="subject" value="Vintage Politics Club waitlist enquiry" />
+            <input type="hidden" name="enquiry-type" value="Club waitlist" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
             <label for="club-email" class="sr-only">Your Email Address</label>
-            <input type="email" id="club-email" name="email" placeholder="Your Email Address" class="w-full px-4 py-3 mb-4 border border-tan rounded focus:outline-none focus:border-burgundy" required>
+            <input type="email" id="club-email" name="email" placeholder="Your Email Address" class="w-full px-4 py-3 mb-4 border border-tan rounded focus:outline-none focus:border-burgundy" required />
             <button type="submit" class="w-full bg-burgundy text-white font-bold py-3 px-6 rounded hover:bg-teal transition uppercase tracking-wider">Register Interest</button>
         </form>
     </div>
