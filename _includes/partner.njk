@@ -1,17 +1,31 @@
 ---
 layout: base.njk
+permalink: "partners/{{ page.fileSlug }}/index.html"
 ---
-<div class="max-w-4xl mx-auto px-4 py-12">
-  <a href="/partners.html" class="inline-block mb-8 text-xs font-bold uppercase tracking-wider text-teal hover:text-rust transition">
-    &larr; Back to All Partners
-  </a>
-  
-  <h1 class="text-4xl font-bold text-burgundy mb-4">{{ title }}</h1>
-  {% if hero_image %}
-    <img src="{{ hero_image }}" alt="{{ title }}" class="w-full h-64 object-cover rounded-lg mb-8 shadow-md" />
-  {% endif %}
+<div class="flex-grow max-w-4xl mx-auto w-full px-4 py-12">
+    <a href="/partners.html" class="inline-block mb-8 text-xs font-bold uppercase tracking-wider text-teal hover:text-rust transition">
+        &larr; Back to All Partners
+    </a>
 
-  <div class="prose max-w-none mb-8">
-    {{ content | safe }}
-  </div>
+    <article class="bg-white p-8 md:p-12 rounded-lg shadow-md border border-tan/30">
+        {% if image or logo %}
+        <img src="{{ image or logo }}" alt="{{ title }}" class="w-full h-72 object-cover rounded mb-8 shadow-sm" />
+        {% endif %}
+
+        <h1 class="text-3xl md:text-4xl font-bold text-burgundy uppercase tracking-wide mb-4">{{ title }}</h1>
+        
+        {% if description or tagline %}
+        <p class="text-lg text-ink font-semibold mb-6 border-b border-tan/30 pb-6">{{ description or tagline }}</p>
+        {% endif %}
+
+        <div class="prose max-w-none text-gray-700 leading-relaxed mb-8">
+            {{ content | safe }}
+        </div>
+
+        {% if url %}
+        <a href="{{ url }}" target="_blank" rel="noopener noreferrer" class="inline-block bg-teal text-white font-bold py-3 px-6 rounded uppercase tracking-wider hover:bg-rust transition">
+            Visit Partner Website &rarr;
+        </a>
+        {% endif %}
+    </article>
 </div>
