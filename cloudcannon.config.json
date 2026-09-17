@@ -1,7 +1,8 @@
 {
   "paths": {
     "uploads": "uploads",
-    "static": ""
+    "static": "",
+    "output": "_site"
   },
   "collections_config": {
     "episodes": {
