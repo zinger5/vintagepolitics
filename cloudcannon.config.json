@@ -43,6 +43,15 @@
     }
   },
   "_inputs": {
+    "offers[*].draft": {
+      "type": "boolean",
+      "label": "Draft Mode (Hide from live site)",
+      "comment": "Check this box to save without publishing to the homepage"
+    },
+    "club_offer.draft": {
+      "type": "boolean",
+      "label": "Draft Mode (Hide from live site)"
+    },
     "date": {
       "type": "date"
     },
