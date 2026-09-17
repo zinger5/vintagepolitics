@@ -37,6 +37,10 @@
       "name": "Partners",
       "icon": "handshake",
       "output": true,
+      "_enabled_editors": [
+        "visual",
+        "content"
+      ],
       "add_options": [
       {
         "name": "Add Partner",
@@ -48,11 +52,14 @@
           "name": "New Partner",
           "value": {
             "_schema": "default",
+            "layout": "partner.njk",
             "title": "",
+            "description": "",
             "tagline": "",
             "logo": "",
             "hero_image": "",
             "offer_code": "",
+            "url": "",
             "draft": false
         }
       }
