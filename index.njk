@@ -75,10 +75,23 @@ format_section:
         .hero-slide.active { opacity: 1; }
     }
     
+    <style>
+    /* Hero Slide Fades */
+    .hero-slide { opacity: 0; transition: opacity 1s ease-in-out; }
+    .hero-slide.active { opacity: 1; }
+    @media (prefers-reduced-motion: reduce) {
+        .hero-slide { transition: none; }
+        .hero-slide.active { opacity: 1; }
+    }
+    
+    /* OVERRIDE SWIPER DEFAULT BLUE */
+    .offers-swiper {
+        --swiper-navigation-color: #FFFFFF !important;
+    }
+
     /* Swiper Navigation Button Styling */
     .offers-swiper .swiper-button-next,
     .offers-swiper .swiper-button-prev {
-        color: #FFFFFF !important; /* White icon arrow */
         background-color: #C85A32 !important; /* Your site's rust/orange color */
         width: 36px;
         height: 36px;
