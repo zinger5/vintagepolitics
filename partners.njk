@@ -5,22 +5,6 @@ permalink: partners.html
 hero_title: Our Partners
 hero_subtitle: Vintage Politics is made possible through the support of esteemed
   partners who share our commitment to quality conversation.
-partners:
-  - name: Corney & Barrow
-    image: https://www.corneyandbarrow.com/media/wysiwyg/c_b_delivery_and_returns_policy.jpg
-    url: https://www.corneyandbarrow.com/
-    description: Proud partners for Series Two, providing exceptional wine curation.
-  - name: ETO
-    image: /uploads/eto-duo-stainless-mirror-copper-mirror.jpg
-    url: https://www.etowine.com/
-    description: An elegant wine decanter and patented preservation system, keeping
-      wine fresh and full of flavour for longer.
-  - name: Vintage Wine & Port
-    image: https://www.vintagewineandport.co.uk/images/vintage-wine-quality-1.jpg
-    url: https://www.vintagewineandport.co.uk/
-    description: Vintage Wine and Port specialises in fortified and rare fine wines,
-      with an incredible range of anniversary vintages. Join our guests and find
-      your vintage wine or Port.
 collaborate_title: Work with Vintage Politics
 collaborate_text: We are open to sponsorship, episode partnerships, live events,
   and bespoke collaborations.
@@ -42,23 +26,38 @@ hosts:
     <h1 class="text-4xl font-bold text-teal mb-6 uppercase tracking-wide text-center">{{ hero_title }}</h1>
     <p class="text-lg text-ink mb-12 max-w-2xl mx-auto text-center">{{ hero_subtitle }}</p>
     
+    <!-- Partner Collection Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
-        {% for partner in partners %}
-        <div class="bg-white p-8 rounded-lg shadow-md border border-tan/30 text-center">
-            <img src="{{ partner.image }}" alt="{{ partner.name }}" class="w-full h-52 object-cover rounded mb-6 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out" />
-            <h3 class="text-2xl font-bold text-burgundy uppercase mb-2"><a href="{{ partner.url }}" target="_blank" rel="noopener noreferrer" class="hover:text-rust transition">{{ partner.name }}</a></h3>
-            <p class="text-gray-600">{{ partner.description }}</p>
-            <a href="{{ partner.url }}" target="_blank" rel="noopener noreferrer" class="inline-block mt-5 text-sm font-bold text-rust uppercase tracking-wider hover:text-teal transition">Visit website &rarr;</a>
-        </div>
+        {% for partner in collections.partners %}
+        {% if not partner.data.draft %}
+        <article class="bg-white p-8 rounded-lg shadow-md border border-tan/30 text-center flex flex-col justify-between">
+            <div>
+                {% if partner.data.image %}
+                <img src="{{ partner.data.image }}" alt="{{ partner.data.name or partner.data.title }}" class="w-full h-52 object-cover rounded mb-6 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out" />
+                {% endif %}
+                <h3 class="text-2xl font-bold text-burgundy uppercase mb-2">
+                    <a href="{{ partner.url }}" class="hover:text-rust transition">{{ partner.data.name or partner.data.title }}</a>
+                </h3>
+                <p class="text-gray-600 mb-6">{{ partner.data.description or partner.data.tagline }}</p>
+            </div>
+            <div>
+                <a href="{{ partner.url }}" class="inline-block text-sm font-bold text-rust uppercase tracking-wider hover:text-teal transition">
+                    Read Full Story & Offers &rarr;
+                </a>
+            </div>
+        </article>
+        {% endif %}
         {% endfor %}
     </div>
 
+    <!-- Collaboration Callout -->
     <div class="bg-cream/50 p-10 rounded-lg border border-tan/50 text-center max-w-3xl mx-auto">
         <h2 class="text-3xl font-bold text-burgundy mb-4 uppercase">{{ collaborate_title }}</h2>
         <p class="mb-6">{{ collaborate_text }}</p>
         <a href="contact.html" class="inline-block bg-teal text-white font-bold py-3 px-6 rounded uppercase tracking-wider hover:bg-ink transition">Contact Partnerships</a>
     </div>
 
+    <!-- Hosts Section -->
     <section class="mt-20">
         <div class="text-center mb-10">
             <h2 class="text-3xl font-bold text-teal uppercase tracking-wide mb-4">{{ hosts_title }}</h2>
@@ -67,10 +66,12 @@ hosts:
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             {% for host in hosts %}
-            <article class="bg-white rounded-lg shadow-md border border-tan/30 overflow-hidden text-center">
+            <article class="bg-white rounded-lg shadow-md border border-tan/30 overflow-hidden text-center flex flex-col justify-between">
                 <img src="{{ host.image }}" alt="{{ host.name }}" class="w-full h-56 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out" />
                 <div class="p-6">
-                    <h3 class="text-xl font-bold text-burgundy uppercase mb-3"><a href="{{ host.url }}" target="_blank" rel="noopener noreferrer" class="hover:text-rust transition">{{ host.name }}</a></h3>
+                    <h3 class="text-xl font-bold text-burgundy uppercase mb-3">
+                        <a href="{{ host.url }}" target="_blank" rel="noopener noreferrer" class="hover:text-rust transition">{{ host.name }}</a>
+                    </h3>
                     <a href="{{ host.url }}" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-rust uppercase tracking-wider hover:text-teal transition">Visit website &rarr;</a>
                 </div>
             </article>
