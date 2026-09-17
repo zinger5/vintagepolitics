@@ -4,6 +4,10 @@
     "static": "",
     "output": "_site"
   },
+  "_enabled_editors": [
+    "visual",
+    "content"
+  ],
   "collections_config": {
     "episodes": {
       "path": "episodes",
@@ -11,6 +15,7 @@
       "name": "Episodes",
       "icon": "ondemand_video",
       "output": true,
+      "data_config": true,
       "add_options": [
         {
           "name": "Add Episode",
@@ -38,19 +43,17 @@
       "name": "Partners",
       "icon": "handshake",
       "output": true,
-      "_enabled_editors": [
-        "visual",
-        "content"
-      ],
+      "data_config": true,
       "add_options": [
-      {
-        "name": "Add Partner",
-        "schema": "default"
-      }
-    ],
+        {
+          "name": "Add Partner",
+          "schema": "default"
+        }
+      ],
       "schemas": {
         "default": {
           "name": "New Partner",
+          "remove_extra_inputs": true,
           "value": {
             "_schema": "default",
             "layout": "partner.njk",
@@ -62,10 +65,10 @@
             "offer_code": "",
             "url": "",
             "draft": false
+          }
         }
       }
-    }
-  },
+    },
     "pages": {
       "path": "",
       "glob": [
@@ -78,8 +81,12 @@
     }
   },
   "_inputs": {
+    "draft": {
+      "type": "checkbox",
+      "label": "Draft Mode (Hide from live site)"
+    },
     "offers[*].draft": {
-        "type": "checkbox",
+      "type": "checkbox",
       "label": "Draft Mode (Hide from live site)",
       "comment": "Check this box to save without publishing to the homepage"
     },
@@ -89,6 +96,15 @@
     },
     "date": {
       "type": "date"
+    },
+    "image": {
+      "type": "image"
+    },
+    "logo": {
+      "type": "image"
+    },
+    "hero_image": {
+      "type": "image"
     },
     "image_path": {
       "type": "image"
