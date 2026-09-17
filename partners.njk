@@ -28,7 +28,7 @@ hosts:
     
     <!-- Partner Collection Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
-        {% for partner in collections.partners %}
+        {% for partner in collections.partners | sort(false, false, 'data.order') %}
         {% if not partner.data.draft %}
         <article class="bg-white p-8 rounded-lg shadow-md border border-tan/30 text-center flex flex-col justify-between">
             <div>

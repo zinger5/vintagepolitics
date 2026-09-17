@@ -61,6 +61,7 @@
             "_schema": "default",
             "layout": "partner.njk",
             "tags": "partners",
+            "order": 10,
             "title": "",
             "description": "",
             "tagline": "",
@@ -137,6 +138,11 @@
     },
     "club_offer.image": {
       "type": "image"
+    },
+    "order": {
+      "type": "number",
+      "label": "Display Order",
+      "comment": "Lower numbers appear first (e.g., 1, 2, 3)"
     }
   }
 }

@@ -2,6 +2,7 @@
 _schema: default
 layout: partner.njk
 tags: partners
+order: 1
 title: Corney & Barrow
 tagline: Proud partners for Series Two, providing exceptional wine curation.
 description: Corney & Barrow is one of the UK’s oldest independent wine merchants.

@@ -2,6 +2,7 @@
 _schema: default
 layout: partner.njk
 tags: partners
+order: 3
 title: Vintage Wine & Port
 tagline: Specialists in fortified and rare fine wines.
 description: Vintage Wine and Port specialises in fortified and rare fine wines,
