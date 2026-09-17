@@ -43,7 +43,10 @@
       "name": "Partners",
       "icon": "handshake",
       "output": true,
-      "data_config": true,
+      "_enabled_editors": [
+        "data",
+        "content"
+      ],
       "add_options": [
         {
           "name": "Add Partner",
