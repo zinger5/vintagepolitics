@@ -67,51 +67,30 @@ format_section:
     bottle from their birth year. The challenge? Guess what their own vintage is
     worth.
 ---
-<style>
-    .hero-slide { opacity: 0; transition: opacity 1s ease-in-out; }
-    .hero-slide.active { opacity: 1; }
-    @media (prefers-reduced-motion: reduce) {
-        .hero-slide { transition: none; }
-        .hero-slide.active { opacity: 1; }
-    }
-    
-    <style>
-    /* Hero Slide Fades */
-    .hero-slide { opacity: 0; transition: opacity 1s ease-in-out; }
-    .hero-slide.active { opacity: 1; }
-    @media (prefers-reduced-motion: reduce) {
-        .hero-slide { transition: none; }
-        .hero-slide.active { opacity: 1; }
-    }
-    
-    /* OVERRIDE SWIPER DEFAULT BLUE */
-    .offers-swiper {
+/* Swiper Navigation Button Styling */
+    .swiper-button-next,
+    .swiper-button-prev {
         --swiper-navigation-color: #FFFFFF !important;
-    }
-
-    /* Swiper Navigation Button Styling */
-    .offers-swiper .swiper-button-next,
-    .offers-swiper .swiper-button-prev {
-        background-color: #C85A32 !important; /* Your site's rust/orange color */
-        width: 36px;
-        height: 36px;
-        border-radius: 9999px;
+        --swiper-theme-color: #FFFFFF !important;
+        background-color: #C85A32 !important;
+        width: 36px !important;
+        height: 36px !important;
+        border-radius: 9999px !important;
         transition: background-color 0.2s ease, transform 0.2s ease;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
     
-    .offers-swiper .swiper-button-next:after,
-    .offers-swiper .swiper-button-prev:after {
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
         font-size: 14px !important;
         font-weight: bold;
     }
     
-    .offers-swiper .swiper-button-next:hover,
-    .offers-swiper .swiper-button-prev:hover {
-        background-color: #A03D49 !important; /* Burgundy highlight on hover */
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        background-color: #A03D49 !important;
         transform: scale(1.05);
     }
-</style>
 
 <!-- Hero Section -->
 <section class="relative bg-ink text-cream py-24 px-4 text-center overflow-hidden">
