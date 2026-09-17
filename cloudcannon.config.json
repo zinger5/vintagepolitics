@@ -60,6 +60,7 @@
           "value": {
             "_schema": "default",
             "layout": "partner.njk",
+            "tags": "partners",
             "title": "",
             "description": "",
             "tagline": "",
