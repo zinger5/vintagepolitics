@@ -20,6 +20,7 @@ offers:
     image: /uploads/banner-image-discount.jpg
     link_text: Shop ETO &rarr;
     link_url: https://www.etowine.com/
+    draft: false
   - eyebrow: Corney & Barrow - Our Official Wine Partner
     title: The series wine case
     description: Discover a limited-edition case of wines selected from the Vintage
@@ -27,6 +28,7 @@ offers:
     image: https://www.corneyandbarrow.com/media/wysiwyg/c_b_delivery_and_returns_policy.jpg
     link_text: Explore the case &rarr;
     link_url: https://www.corneyandbarrow.com/
+    draft: false
   - eyebrow: COMPETITION
     title: Win an ETO decanter
     description: To celebrate the partnership between ETO and Vintage Politics, ETO
@@ -34,6 +36,7 @@ offers:
     image: /uploads/banner-image-competition.jpg
     link_text: ENTER HERE &rarr;
     link_url: http://www.etowine.com
+    draft: false
   - eyebrow: VINTAGE WINE & PORT
     title: 'Subscribe '
     description: Save 10% on fortified and fine wines from Vintage Wine & Port,
@@ -41,6 +44,7 @@ offers:
     image: https://www.vintagewineandport.co.uk/assets/includes/Vintage-wine-and-port-building-1.jpg
     link_text: SUBSCRIBE HERE &rarr;
     link_url: https://www.vintagewineandport.co.uk/subscribe.cfm
+    draft: false
 club_offer:
   eyebrow: BECOME A MEMBER
   title: Join The Vintage Politics Club
@@ -49,6 +53,7 @@ club_offer:
   image: img/club/VintagePolitics_Cheers_Round_Burgundy.png
   link_text: JOIN NOW &rarr;
   link_url: club.html
+  draft: false
 latest_episode:
   title: 'Latest Episode: James Lyons'
   youtube_id: GwqIO19rNc0?si=MQGjkwZTJkgyESQ-
@@ -139,6 +144,7 @@ format_section:
                 <div class="swiper-wrapper">
                     
                     {% for offer in offers %}
+                    {% if not offer.draft %}
                     <div class="swiper-slide h-auto">
                         <article class="bg-white text-ink rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
                             <img src="{{ offer.image }}" alt="Partner image" class="w-full h-20 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out" />
@@ -150,9 +156,11 @@ format_section:
                             </div>
                         </article>
                     </div>
+                    {% endif %}
                     {% endfor %}
 
                     <!-- Club Offer Slide -->
+                    {% if club_offer and not club_offer.draft %}
                     <div class="swiper-slide h-auto">
                         <article class="bg-cream text-ink rounded-lg overflow-hidden shadow-lg border-2 border-rust flex flex-col h-full">
                             <img src="{{ club_offer.image }}" alt="Club image" class="w-full h-20 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out" />
@@ -164,6 +172,7 @@ format_section:
                             </div>
                         </article>
                     </div>
+                    {% endif %}
 
                 </div>
             </div>
