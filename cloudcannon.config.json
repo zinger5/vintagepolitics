@@ -31,6 +31,33 @@
         }
       }
     },
+    "partners": {
+      "path": "partners",
+      "glob": "*.md",
+      "name": "Partners",
+      "icon": "handshake",
+      "output": true,
+      "add_options": [
+      {
+        "name": "Add Partner",
+        "schema": "default"
+      }
+    ],
+      "schemas": {
+        "default": {
+          "name": "New Partner",
+          "value": {
+            "_schema": "default",
+            "title": "",
+            "tagline": "",
+            "logo": "",
+            "hero_image": "",
+            "offer_code": "",
+            "draft": false
+        }
+      }
+    }
+  },
     "pages": {
       "path": "",
       "glob": [
