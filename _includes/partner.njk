@@ -1,0 +1,17 @@
+---
+layout: base.njk
+---
+<div class="max-w-4xl mx-auto px-4 py-12">
+  <a href="/partners.html" class="inline-block mb-8 text-xs font-bold uppercase tracking-wider text-teal hover:text-rust transition">
+    &larr; Back to All Partners
+  </a>
+  
+  <h1 class="text-4xl font-bold text-burgundy mb-4">{{ title }}</h1>
+  {% if hero_image %}
+    <img src="{{ hero_image }}" alt="{{ title }}" class="w-full h-64 object-cover rounded-lg mb-8 shadow-md" />
+  {% endif %}
+
+  <div class="prose max-w-none mb-8">
+    {{ content | safe }}
+  </div>
+</div>
