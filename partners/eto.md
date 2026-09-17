@@ -1,6 +1,7 @@
 ---
 _schema: default
 layout: partner.njk
+tags: partners
 title: "ETO"
 tagline: "An elegant wine decanter and patented preservation system."
 description: "An elegant wine decanter and patented preservation system, keeping wine fresh and full of flavour for longer."

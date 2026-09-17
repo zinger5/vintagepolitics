@@ -1,6 +1,7 @@
 ---
 _schema: default
 layout: partner.njk
+tags: partners
 title: "Vintage Wine & Port"
 tagline: "Specialists in fortified and rare fine wines."
 description: "Vintage Wine and Port specialises in fortified and rare fine wines, with an incredible range of anniversary vintages."
