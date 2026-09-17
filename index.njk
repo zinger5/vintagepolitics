@@ -221,26 +221,52 @@ format_section:
     }
 
     // Offers Swiper Script
-    document.addEventListener('DOMContentLoaded', function () {
-        const offersSwiper = new Swiper('.offers-swiper', {
-            loop: true,
-            centeredSlides: false,
-            spaceBetween: 16,
-            slidesPerView: 1.2, // Mobile default: 1 full card + partial edge
-            breakpoints: {
-                640: {
-                    slidesPerView: 2.2, // Tablet
-                    spaceBetween: 16
-                },
-                1024: {
-                    slidesPerView: 3.2, // Desktop: 3 cards in view + 4th partially visible
-                    spaceBetween: 20
+    // Offers Swiper Script
+document.addEventListener('DOMContentLoaded', function () {
+    const offersSwiper = new Swiper('.offers-swiper', {
+        loop: true,
+        centeredSlides: false,
+        spaceBetween: 16,
+        slidesPerView: 1.2, // Mobile default: 1 full card + partial edge
+        
+        // 1. Subtle, stepped autoplay (moves 1 slide every 10 seconds)
+        autoplay: {
+            delay: 10000, // 10,000 ms = 10 seconds
+            disableOnInteraction: false, // Resume autoplay after user clicks/swipes
+            pauseOnMouseEnter: true, // Pause scrolling while user hovers over an offer
+        },
+        
+        // 2. Randomize slide order on page load
+        on: {
+            beforeInit: function (swiper) {
+                const wrapper = swiper.el.querySelector('.swiper-wrapper');
+                const slides = Array.from(wrapper.children);
+                
+                // Shuffle array of slide elements
+                for (let i = slides.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [slides[i], slides[j]] = [slides[j], slides[i]];
                 }
+                
+                // Re-append slides in shuffled order before Swiper builds controls
+                slides.forEach(slide => wrapper.appendChild(slide));
+            }
+        },
+
+        breakpoints: {
+            640: {
+                slidesPerView: 2.2, // Tablet
+                spaceBetween: 16
             },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
+            1024: {
+                slidesPerView: 3.2, // Desktop: 3 cards + 4th partially visible
+                spaceBetween: 20
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     });
+});
 </script>
