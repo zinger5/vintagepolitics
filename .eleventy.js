@@ -1,6 +1,7 @@
 module.exports = function(eleventyConfig) {
   // Tell Eleventy to copy your image folder
   eleventyConfig.addPassthroughCopy("uploads");
+  eleventyConfig.addPassthroughCopy("img");
   
   // Tell Eleventy to copy the Decap CMS admin folder
   eleventyConfig.addPassthroughCopy("admin");
