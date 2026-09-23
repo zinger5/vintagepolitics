@@ -3,7 +3,7 @@ title: Dom Joly
 season_info: Series 1, Episode 4
 date: 2026-04-02
 youtube_id: qnQH1QDpI8c?si=u7exHYmsyEmIOatR
-image_path: img/guests/domjoly_720p.webp
+image_path: /img/guests/domjoly_720p.webp
 short_bio: Dom Joly is a comedian, writer, broadcaster and travel author, best known as the creator and star of Trigger Happy TV. Before comedy, he worked in Prague with the European Commission, and has since built a career spanning television, journalism, travel writing and documentary-making.
 
 wines:

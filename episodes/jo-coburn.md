@@ -4,7 +4,7 @@ title: Jo Coburn
 season_info: Series 1, Episode 5
 date: 2026-04-09T00:00:00Z
 youtube_id: tOTaEomtsWs?si=XAf9oyC57cFrGlXu
-image_path: img/guests/jocoburn_720p.webp
+image_path: /img/guests/jocoburn_720p.webp
 short_bio: Jo Coburn is an experienced political broadcaster and journalist,
   best known for her work at the BBC and now as a presenter on Times Radio.
 wines:
@@ -33,7 +33,7 @@ wines:
     vintage: 30 years
     price: £27.00
     has_facts: true
-    image: img/wines/bottle_px.webp
+    image: /img/wines/bottle_px.webp
     location: Jerez, Spain
     producer: González Byass
     grapes: Pedro Ximénez

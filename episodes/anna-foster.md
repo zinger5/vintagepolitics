@@ -4,7 +4,7 @@ title: Anna Foster
 season_info: Series 1, Episode 2
 date: 2026-03-27T00:00:00Z
 youtube_id: QzvmdhTZjtM?si=OJ0hAtf7Pher7573
-image_path: img/guests/annafoster_720p.webp
+image_path: /img/guests/annafoster_720p.webp
 short_bio: Anna Foster is a BBC journalist and presenter of Radio 4’s Today
   programme. A former BBC Middle East correspondent, she has reported
   extensively on conflict, politics and international affairs.

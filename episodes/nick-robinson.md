@@ -4,7 +4,7 @@ title: Nick Robinson
 season_info: Series 1, Episode 3
 date: 2026-03-28T00:00:00Z
 youtube_id: o9fDV3tB83w?si=aAIjo0LuqjyIaVHY
-image_path: img/guests/nickrobinson_720p.webp
+image_path: /img/guests/nickrobinson_720p.webp
 short_bio: Nick Robinson is a presenter of BBC Radio 4’s Today programme and a
   former BBC Political Editor, with a career spanning decades at the heart of
   British political journalism.
@@ -28,7 +28,7 @@ wines:
     vintage: '2019'
     price: £70.00
     has_facts: true
-    image: img/wines/bottle_margeaux.webp
+    image: /img/wines/bottle_margeaux.webp
     location: Bordeaux, France
     producer: Château Margaux
     grapes: Merlot and Cabernet Sauvignon blend

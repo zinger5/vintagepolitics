@@ -4,7 +4,7 @@ title: Lord Chris Patten
 season_info: Series 1, Episode 9
 date: 2026-07-05T00:00:00Z
 youtube_id: GwBBTRtcMzM?si=zX4NMUOyWbSUjbuK
-image_path: img/guests/lordpatten_720p.webp
+image_path: /img/guests/lordpatten_720p.webp
 short_bio: Lord Chris Patten was the last Governor of Hong Kong, overseeing the
   territory in the years leading up to the 1997 handover to China. He previously
   served as a Cabinet minister and later became a European Commissioner,
@@ -29,7 +29,7 @@ wines:
     vintage: '2018'
     price: £180.00
     has_facts: true
-    image: img/wines/bottle_celebre.webp
+    image: /img/wines/bottle_celebre.webp
     location: Ningxia, China
     producer: Célèbre
     grapes: Cabernet Sauvignon blend

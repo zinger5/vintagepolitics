@@ -3,7 +3,7 @@ title: John Pienaar
 season_info: Series 1, Episode 8
 date: 2026-04-30
 youtube_id: 3wVO6A4mOy8?si=MqDcz77dUCqrs5fZ
-image_path: img/guests/johnpienaar_720p.webp
+image_path: /img/guests/johnpienaar_720p.webp
 short_bio: John Pienaar is a leading political broadcaster and journalist, known for his incisive coverage of Westminster.
 
 wines:

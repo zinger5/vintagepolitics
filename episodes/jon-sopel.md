@@ -4,7 +4,7 @@ title: Jon Sopel
 season_info: Series 1, Episode 1
 date: 2026-03-26T00:00:00Z
 youtube_id: oF0fjgacqFg?si=86ebeK2DKnxk7fCZ
-image_path: img/guests/jonsopel_720p.webp
+image_path: /img/guests/jonsopel_720p.webp
 short_bio: Jon Sopel is a journalist, broadcaster and author, co-host of The
   News Agents podcast and a former BBC North America Editor.
 wines:
@@ -27,7 +27,7 @@ wines:
     vintage: '2014'
     price: £176.75
     has_facts: true
-    image: img/wines/bottle_ulysses.webp
+    image: /img/wines/bottle_ulysses.webp
     location: Napa Valley, California
     producer: Ulysses Vineyard
     grapes: Cabernet Sauvignon

@@ -4,7 +4,7 @@ title: Guto Harri
 season_info: Series 1, Episode 6
 date: 2026-04-16T00:00:00Z
 youtube_id: Xt-sUxvsSqM?si=eFKLSuRIb5jpCeLg
-image_path: img/guests/gutoharri_720p.webp
+image_path: /img/guests/gutoharri_720p.webp
 short_bio: Guto Harri is a Welsh broadcaster, writer and communications adviser.
   He spent much of his BBC career covering UK politics, serving as Chief
   Political Correspondent at Westminster before postings in Rome and New York.
@@ -42,7 +42,7 @@ wines:
     vintage: '1966'
     price: £315.00
     has_facts: true
-    image: img/wines/bottle_grahams.webp
+    image: /img/wines/bottle_grahams.webp
     location: Douro Valley, Portugal
     producer: Graham's
     grapes: Traditional Douro grape varieties

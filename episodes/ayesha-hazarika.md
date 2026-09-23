@@ -4,7 +4,7 @@ title: Baroness Ayesha Hazarika
 season_info: Series 1, Episode 10
 date: 2026-05-14T00:00:00Z
 youtube_id: xDiN6Ktz4AU?si=suCj66ewUKwJxcc6
-image_path: img/guests/ayeshahazarika_720p.webp
+image_path: /img/guests/ayeshahazarika_720p.webp
 short_bio: Baroness Hazarika is a political commentator, broadcaster, and former
   special adviser to senior Labour Party politicians.
 wines:
@@ -27,7 +27,7 @@ wines:
     vintage: '2024'
     price: £42.00
     has_facts: true
-    image: img/wines/bottle_peyrassol.webp
+    image: /img/wines/bottle_peyrassol.webp
     location: Provence, France
     producer: Château Peyrassol
     grapes: Cinsault

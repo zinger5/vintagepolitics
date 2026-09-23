@@ -4,7 +4,7 @@ title: Decca Aitkenhead
 season_info: Series 1, Episode 7
 date: 2026-04-23T00:00:00Z
 youtube_id: cKQgDF31b3U?si=buzNXwpV9_NyRobp
-image_path: img/guests/deccaaitkenhead_720p.webp
+image_path: /img/guests/deccaaitkenhead_720p.webp
 short_bio: Decca Aitkenhead is an award-winning journalist, author and The Chief
   Interviewer at The Sunday Times, known for her incisive, revealing interviews
   with some of the most prominent figures in public life.
@@ -34,7 +34,7 @@ wines:
     vintage: '2008'
     price: £50.00
     has_facts: true
-    image: img/wines/bottle_gewurtztraminer.webp
+    image: /img/wines/bottle_gewurtztraminer.webp
     location: Alsace, France
     producer: Domaine Weinbach
     grapes: Gewurztraminer

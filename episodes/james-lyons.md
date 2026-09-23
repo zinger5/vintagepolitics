@@ -4,7 +4,7 @@ title: James Lyons
 season_info: Special
 date: 2026-08-01T00:00:00Z
 youtube_id: GwqIO19rNc0?si=MQGjkwZTJkgyESQ-
-image_path: img/guests/jameslyons_720p.webp
+image_path: /img/guests/jameslyons_720p.webp
 short_bio: James Lyons is a communications consultant, a former political aide
   and journalist. He served as Downing Street Director of Strategic
   Communications under Prime Minister Keir Starmer.
