@@ -1,6 +1,9 @@
 module.exports = function(eleventyConfig) {
   // Tell Eleventy to copy your image folder
   eleventyConfig.addPassthroughCopy("uploads");
+  
+  // Tell Eleventy to copy the Decap CMS admin folder
+  eleventyConfig.addPassthroughCopy("admin");
 
   // Create a smart, grouped collection for the episodes
   eleventyConfig.addCollection("episodesBySeason", function(collectionApi) {

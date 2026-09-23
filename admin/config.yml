@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main 
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "episodes"
+    label: "Episodes"
+    folder: "episodes"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Schema", name: "_schema", widget: "hidden", default: "default"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Episode Title", name: "episode_title", widget: "string"}
+      - {label: "YouTube ID", name: "youtube_id", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Date", name: "date", widget: "datetime", required: false}
+
+  - name: "partners"
+    label: "Partners"
+    folder: "partners"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Schema", name: "_schema", widget: "hidden", default: "default"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "partner.njk"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "partners"}
+      - {label: "Draft Mode", name: "draft", widget: "boolean", default: false}
+      - {label: "Display Order", name: "order", widget: "number", value_type: "int", default: 10}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Tagline", name: "tagline", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Logo", name: "logo", widget: "image", required: false}
+      - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
+      - {label: "Offer Code", name: "offer_code", widget: "string", required: false}
+      - {label: "URL", name: "url", widget: "string", required: false}
