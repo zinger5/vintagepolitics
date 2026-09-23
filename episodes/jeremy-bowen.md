@@ -3,7 +3,7 @@ _schema: default
 title: Jeremy Bowen
 season_info: Series 2, Episode 1
 date: 2026-09-24T00:00:00Z
-youtube_id: GwqIO19rNc0?si=MQGjkwZTJkgyESQ-
+youtube_id: 
 image_path: img/guests/jeremybowen_720p.webp
 short_bio: Jeremy Bowen is the BBC's International Editor and one of Britain's most experienced foreign correspondents. Since joining the BBC in 1984, he has reported from more than 70 countries and covered conflicts across the Middle East, the Balkans and beyond.
 wines:

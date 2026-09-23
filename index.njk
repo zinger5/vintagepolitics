@@ -213,9 +213,24 @@ format_section:
     <section id="latest" class="mb-20">
         <h2 class="text-3xl font-bold text-burgundy mb-6 uppercase tracking-wider">Latest Episode: {{ recent_episode.data.title }}</h2>
         <div class="bg-white rounded-lg shadow-xl overflow-hidden border border-tan/30">
+            
             <div class="aspect-w-16 aspect-h-9 bg-ink relative" style="padding-top: 56.25%;">
-                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/{{ recent_episode.data.youtube_id }}" title="Vintage Politics Latest Episode: {{ recent_episode.data.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                <!-- Check if there is a YouTube ID -->
+                {% if recent_episode.data.youtube_id %}
+                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/{{ recent_episode.data.youtube_id }}" title="Vintage Politics Latest Episode: {{ recent_episode.data.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                
+                <!-- Fallback: If no YouTube ID, show the guest's image -->
+                {% elif recent_episode.data.image_path %}
+                    <img src="{{ recent_episode.data.image_path }}" alt="{{ recent_episode.data.title }}" class="absolute top-0 left-0 w-full h-full object-cover">
+                
+                <!-- Fallback: If neither exist, just show a branded background -->
+                {% else %}
+                    <div class="absolute top-0 left-0 w-full h-full bg-burgundy flex items-center justify-center">
+                        <span class="text-cream font-bold text-xl uppercase tracking-widest">Audio Episode</span>
+                    </div>
+                {% endif %}
             </div>
+
             <div class="p-6">
                 <h3 class="text-2xl font-bold text-ink mb-2">
                     <a href="{{ recent_episode.url }}" class="hover:text-rust transition">{{ recent_episode.data.season_info }} &rarr;</a>

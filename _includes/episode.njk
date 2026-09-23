@@ -12,7 +12,20 @@ layout: base.njk
     <!-- YOUTUBE PLAYER -->
     <div class="bg-white rounded-lg shadow-xl overflow-hidden border border-tan/30 mb-8">
         <div class="aspect-w-16 aspect-h-9 bg-ink relative" style="padding-top: 56.25%;">
-            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/{{ youtube_id }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <!-- Check if there is a YouTube ID -->
+            {% if youtube_id %}
+                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/{{ youtube_id }}" title="Vintage Politics Episode: {{ title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            
+            <!-- Fallback: Guest Image -->
+            {% elif image_path %}
+                <img src="{{ image_path }}" alt="Portrait of {{ title }}" class="absolute top-0 left-0 w-full h-full object-cover">
+            
+            <!-- Fallback: Audio Only Box -->
+            {% else %}
+                <div class="absolute top-0 left-0 w-full h-full bg-burgundy flex items-center justify-center">
+                    <span class="text-cream font-bold text-2xl md:text-4xl uppercase tracking-widest">Audio Episode</span>
+                </div>
+            {% endif %}
         </div>
     </div>
 

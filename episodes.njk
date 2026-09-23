@@ -23,7 +23,20 @@ permalink: episodes.html
             {% for ep in seasonGroup.episodes %}
             <article class="bg-white p-6 rounded-lg shadow-lg border border-tan/30 flex flex-col">
                 <div class="aspect-w-16 aspect-h-9 bg-ink mb-4 rounded overflow-hidden relative" style="padding-top: 56.25%;">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/{{ ep.data.youtube_id }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <!-- Check if there is a YouTube ID -->
+                    {% if ep.data.youtube_id %}
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/{{ ep.data.youtube_id }}" title="Vintage Politics Episode: {{ ep.data.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    
+                    <!-- Fallback: Guest Image -->
+                    {% elif ep.data.image_path %}
+                        <img src="{{ ep.data.image_path }}" alt="{{ ep.data.title }}" class="absolute top-0 left-0 w-full h-full object-cover">
+                    
+                    <!-- Fallback: Audio Only Box -->
+                    {% else %}
+                        <div class="absolute top-0 left-0 w-full h-full bg-burgundy flex items-center justify-center">
+                            <span class="text-cream font-bold text-lg uppercase tracking-widest">Audio Episode</span>
+                        </div>
+                    {% endif %}
                 </div>
                 <h2 class="text-2xl font-bold text-burgundy mb-2 uppercase">
                     <a href="{{ ep.url }}" class="hover:text-rust transition">{{ ep.data.title }}</a>
