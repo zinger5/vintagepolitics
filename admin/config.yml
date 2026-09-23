@@ -1,11 +1,6 @@
-backend:
-  name: git-gateway
-  branch: main 
-
-media_folder: "uploads"
-public_folder: "/uploads"
-
-collections:
+# ----------------------------------------------------
+  # EPISODES COLLECTION
+  # ----------------------------------------------------
   - name: "episodes"
     label: "Episodes"
     folder: "episodes"
@@ -13,28 +8,35 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Schema", name: "_schema", widget: "hidden", default: "default"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Episode Title", name: "episode_title", widget: "string"}
-      - {label: "YouTube ID", name: "youtube_id", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Guest Name (Title)", name: "title", widget: "string"}
+      - {label: "Season Info", name: "season_info", widget: "string", required: false}
       - {label: "Date", name: "date", widget: "datetime", required: false}
+      - {label: "YouTube ID", name: "youtube_id", widget: "string", required: false}
+      - {label: "Guest Image", name: "image_path", widget: "image", required: false}
+      - {label: "Short Bio", name: "short_bio", widget: "text", required: false}
+      
+      # The Wines List
+      - label: "Wines"
+        name: "wines"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Label (e.g., Mid-Week Wine, Anna's Vintage)", name: "label", widget: "string", required: false}
+          - {label: "Wine Name", name: "name", widget: "string", required: false}
+          - {label: "Supplier Name", name: "supplier", widget: "string", required: false}
+          - {label: "Supplier URL", name: "supplier_url", widget: "string", required: false}
+          - {label: "Vintage", name: "vintage", widget: "string", required: false}
+          - {label: "Price", name: "price", widget: "string", required: false}
+          
+          # Optional deep-dive facts (used for Wine 3 usually)
+          - {label: "Show Extra Facts?", name: "has_facts", widget: "boolean", default: false, required: false}
+          - {label: "Bottle Image", name: "image", widget: "image", required: false}
+          - {label: "Location", name: "location", widget: "string", required: false}
+          - {label: "Producer", name: "producer", widget: "string", required: false}
+          - {label: "Grapes", name: "grapes", widget: "string", required: false}
+          - {label: "Alcohol ABV", name: "alcohol", widget: "string", required: false}
+          - {label: "Tasting Profile", name: "profile", widget: "string", required: false}
+          - {label: "Tasting Notes", name: "notes", widget: "text", required: false}
 
-  - name: "partners"
-    label: "Partners"
-    folder: "partners"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Schema", name: "_schema", widget: "hidden", default: "default"}
-      - {label: "Layout", name: "layout", widget: "hidden", default: "partner.njk"}
-      - {label: "Tags", name: "tags", widget: "hidden", default: "partners"}
-      - {label: "Draft Mode", name: "draft", widget: "boolean", default: false}
-      - {label: "Display Order", name: "order", widget: "number", value_type: "int", default: 10}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Tagline", name: "tagline", widget: "string", required: false}
-      - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Logo", name: "logo", widget: "image", required: false}
-      - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
-      - {label: "Offer Code", name: "offer_code", widget: "string", required: false}
-      - {label: "URL", name: "url", widget: "string", required: false}
+      # This maps to the text underneath the second ---
+      - {label: "Main Episode Description", name: "body", widget: "markdown"}
