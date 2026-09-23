@@ -1,4 +1,79 @@
-# ----------------------------------------------------
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  # ----------------------------------------------------
+  # PAGES COLLECTION (Homepage)
+  # ----------------------------------------------------
+  - name: "pages"
+    label: "Pages"
+    delete: false
+    files:
+      - file: "index.njk"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Permalink", name: "permalink", widget: "hidden", default: "index.html"}
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "text"}
+              - {label: "Button Text", name: "button_text", widget: "string"}
+          - label: "Offers Section Header"
+            name: "offers_section"
+            widget: "object"
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Link Text", name: "link_text", widget: "string"}
+              - {label: "Link URL", name: "link_url", widget: "string"}
+          - label: "Carousel Offers"
+            name: "offers"
+            widget: "list"
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Image", name: "image", widget: "image", required: false}
+              - {label: "Link Text", name: "link_text", widget: "string"}
+              - {label: "Link URL", name: "link_url", widget: "string"}
+              - {label: "Draft", name: "draft", widget: "boolean", default: false}
+          - label: "Club Offer Card"
+            name: "club_offer"
+            widget: "object"
+            fields:
+              - {label: "Eyebrow", name: "eyebrow", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Image", name: "image", widget: "image", required: false}
+              - {label: "Link Text", name: "link_text", widget: "string"}
+              - {label: "Link URL", name: "link_url", widget: "string"}
+              - {label: "Draft", name: "draft", widget: "boolean", default: false}
+          - label: "Latest Episode Highlight"
+            name: "latest_episode"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string"}
+              - {label: "YouTube Video ID", name: "youtube_id", widget: "string"}
+              - {label: "Episode Title", name: "episode_title", widget: "string"}
+              - {label: "Episode URL", name: "episode_url", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+          - label: "The Format Section"
+            name: "format_section"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+
+  # ----------------------------------------------------
   # EPISODES COLLECTION
   # ----------------------------------------------------
   - name: "episodes"
@@ -14,21 +89,17 @@
       - {label: "YouTube ID", name: "youtube_id", widget: "string", required: false}
       - {label: "Guest Image", name: "image_path", widget: "image", required: false}
       - {label: "Short Bio", name: "short_bio", widget: "text", required: false}
-      
-      # The Wines List
       - label: "Wines"
         name: "wines"
         widget: "list"
         required: false
         fields:
-          - {label: "Label (e.g., Mid-Week Wine, Anna's Vintage)", name: "label", widget: "string", required: false}
+          - {label: "Label", name: "label", widget: "string", required: false}
           - {label: "Wine Name", name: "name", widget: "string", required: false}
           - {label: "Supplier Name", name: "supplier", widget: "string", required: false}
           - {label: "Supplier URL", name: "supplier_url", widget: "string", required: false}
           - {label: "Vintage", name: "vintage", widget: "string", required: false}
           - {label: "Price", name: "price", widget: "string", required: false}
-          
-          # Optional deep-dive facts (used for Wine 3 usually)
           - {label: "Show Extra Facts?", name: "has_facts", widget: "boolean", default: false, required: false}
           - {label: "Bottle Image", name: "image", widget: "image", required: false}
           - {label: "Location", name: "location", widget: "string", required: false}
@@ -37,6 +108,27 @@
           - {label: "Alcohol ABV", name: "alcohol", widget: "string", required: false}
           - {label: "Tasting Profile", name: "profile", widget: "string", required: false}
           - {label: "Tasting Notes", name: "notes", widget: "text", required: false}
-
-      # This maps to the text underneath the second ---
       - {label: "Main Episode Description", name: "body", widget: "markdown"}
+
+  # ----------------------------------------------------
+  # PARTNERS COLLECTION
+  # ----------------------------------------------------
+  - name: "partners"
+    label: "Partners"
+    folder: "partners"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Schema", name: "_schema", widget: "hidden", default: "default"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "partner.njk"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "partners"}
+      - {label: "Draft Mode", name: "draft", widget: "boolean", default: false}
+      - {label: "Display Order", name: "order", widget: "number", value_type: "int", default: 10}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Tagline", name: "tagline", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Logo", name: "logo", widget: "image", required: false}
+      - {label: "Hero Image", name: "hero_image", widget: "image", required: false}
+      - {label: "Offer Code", name: "offer_code", widget: "string", required: false}
+      - {label: "URL", name: "url", widget: "string", required: false}
