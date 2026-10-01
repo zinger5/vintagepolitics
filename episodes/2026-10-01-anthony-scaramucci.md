@@ -3,6 +3,7 @@ _schema: default
 title: Anthony Scaramucci
 season_info: Series 2, Episode 2
 date: 2026-10-01T01:00:00.000+01:00
+youtube_id: tJDyLnYzi00
 image_path: /uploads/vintage-20politics-20s02-20-20anthony-20scaramucci-20v3.00_28_44_00410.still010.jpg.jpeg
 short_bio: "Anthony Scaramucci is an American financier, entrepreneur, author
   and political commentator. Founder and Managing Partner of SkyBridge Capital
@@ -57,7 +58,7 @@ wines:
     name: Enrico Serafino Barolo 1964
     supplier: Vintage Wine and Port
     alcohol: 13%
-    label: Wine 4
+    label: Anthony's Vintage
     supplier_url: https://www.vintagewineandport.co.uk/SearchResults.cfm?startrow=1&searchstring=&sorttype=&sortorder=&resultsperpage=25
 ---
 In this episode Anthony Scaramucci shares his take on the problems in America right now and how to fix them. He enjoys some great non alcoholic orange wine from Chile, a special Californian Pinot Noir from Andersen Valley and a remarkably well preserved Barolo from his vintage of birth. A candid take on current events, whilst reflecting on his Italian American roots, great conversation over great wines and drinks.
