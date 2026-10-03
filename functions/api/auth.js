@@ -1,0 +1,6 @@
+export async function onRequest(context) {
+  const { env } = context;
+  const client_id = env.GITHUB_CLIENT_ID;
+  const authUrl = `https://github.com/login/oauth/authorize?client_id=${client_id}&scope=repo,user`;
+  return Response.redirect(authUrl, 302);
+}
