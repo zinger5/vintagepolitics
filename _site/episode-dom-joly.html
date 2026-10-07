@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom Joly | Vintage Politics</title>
     <link rel="stylesheet" href="https://use.typekit.net/rxx7bfh.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { theme: { extend: { colors: { burgundy: '#401125', teal: '#305450', cream: '#E5DCD7', rust: '#BF6536', tan: '#CB997E', ink: '#02020A' }, fontFamily: { sans: ['"futura-pt"', 'ui-sans-serif', 'system-ui', 'sans-serif'] } } } }</script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="bg-cream text-ink font-sans antialiased flex flex-col min-h-screen overflow-y-scroll">
     
@@ -57,7 +60,12 @@
     <!-- YOUTUBE PLAYER -->
     <div class="bg-white rounded-lg shadow-xl overflow-hidden border border-tan/30 mb-8">
         <div class="aspect-w-16 aspect-h-9 bg-ink relative" style="padding-top: 56.25%;">
-            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/qnQH1QDpI8c?si=u7exHYmsyEmIOatR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <!-- Check if there is a YouTube ID -->
+            
+                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/qnQH1QDpI8c?si=u7exHYmsyEmIOatR" title="Vintage Politics Episode: Dom Joly" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            
+            <!-- Fallback: Guest Image -->
+            
         </div>
     </div>
 
@@ -72,7 +80,7 @@
             
             <div class="bg-cream/50 border border-tan/30 p-6 rounded-lg mb-8">
                 <h3 class="text-xl font-bold text-burgundy mb-4 uppercase">About Dom Joly</h3>
-                <img src="img/guests/domjoly_720p.webp" alt="Portrait of Dom Joly" class="w-full h-64 object-cover rounded mb-4 shadow-sm grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+                <img src="/img/guests/domjoly_720p.webp" alt="Portrait of Dom Joly" class="w-full h-64 object-cover rounded mb-4 shadow-sm grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
                 <p class="text-ink text-sm leading-relaxed">Dom Joly is a comedian, writer, broadcaster and travel author, best known as the creator and star of Trigger Happy TV. Before comedy, he worked in Prague with the European Commission, and has since built a career spanning television, journalism, travel writing and documentary-making.</p>
             </div>
         </div>
@@ -223,5 +231,16 @@
     <footer class="bg-ink text-cream pt-12 pb-6 border-t border-tan/20 mt-auto">
         <div class="text-center text-xs opacity-50 uppercase tracking-widest pt-6">&copy; 2026 Vintage Politics Ltd. All rights reserved.</div>
     </footer>
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>

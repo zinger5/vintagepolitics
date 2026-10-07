@@ -10,7 +10,7 @@ wines:
   - label: Mid-Week Wine
     name: Melini Chianti Classico
     supplier: Waitrose
-    supplier_url:https://www.waitrose.com/ecom/products/melini-chianti-classico/823719-783696-783697
+    supplier_url: https://www.waitrose.com/ecom/products/melini-chianti-classico/823719-783696-783697
     vintage: '2021'
     price: £13.50
   - label: Wine 1

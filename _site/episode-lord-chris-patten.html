@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lord Chris Patten | Vintage Politics</title>
     <link rel="stylesheet" href="https://use.typekit.net/rxx7bfh.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { theme: { extend: { colors: { burgundy: '#401125', teal: '#305450', cream: '#E5DCD7', rust: '#BF6536', tan: '#CB997E', ink: '#02020A' }, fontFamily: { sans: ['"futura-pt"', 'ui-sans-serif', 'system-ui', 'sans-serif'] } } } }</script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="bg-cream text-ink font-sans antialiased flex flex-col min-h-screen overflow-y-scroll">
     
@@ -57,7 +60,12 @@
     <!-- YOUTUBE PLAYER -->
     <div class="bg-white rounded-lg shadow-xl overflow-hidden border border-tan/30 mb-8">
         <div class="aspect-w-16 aspect-h-9 bg-ink relative" style="padding-top: 56.25%;">
-            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/GwBBTRtcMzM?si=zX4NMUOyWbSUjbuK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <!-- Check if there is a YouTube ID -->
+            
+                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/GwBBTRtcMzM?si=zX4NMUOyWbSUjbuK" title="Vintage Politics Episode: Lord Chris Patten" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            
+            <!-- Fallback: Guest Image -->
+            
         </div>
     </div>
 
@@ -72,7 +80,7 @@
             
             <div class="bg-cream/50 border border-tan/30 p-6 rounded-lg mb-8">
                 <h3 class="text-xl font-bold text-burgundy mb-4 uppercase">About Lord Chris Patten</h3>
-                <img src="img/guests/lordpatten_720p.webp" alt="Portrait of Lord Chris Patten" class="w-full h-64 object-cover rounded mb-4 shadow-sm grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+                <img src="/img/guests/lordpatten_720p.webp" alt="Portrait of Lord Chris Patten" class="w-full h-64 object-cover rounded mb-4 shadow-sm grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
                 <p class="text-ink text-sm leading-relaxed">Lord Chris Patten was the last Governor of Hong Kong, overseeing the territory in the years leading up to the 1997 handover to China. He previously served as a Cabinet minister and later became a European Commissioner, Chairman of the BBC Trust and Chancellor of the University of Oxford.</p>
             </div>
         </div>
@@ -183,7 +191,7 @@
                 <div id="celebre-red-detail" class="wine-panel hidden opacity-0 transition-opacity duration-400" aria-hidden="true">
                     <button type="button" class="text-sm font-bold text-rust hover:text-teal transition uppercase tracking-wider mb-6" onclick="showWineList('celebre-red-detail')">&larr; Back to list</button>
                     
-                    <img src="img/wines/bottle_celebre.webp" alt="Bottle of Célèbre Red" class="w-full max-h-72 object-contain mb-6">
+                    <img src="/img/wines/bottle_celebre.webp" alt="Bottle of Célèbre Red" class="w-full max-h-72 object-contain mb-6">
                     
                     <h2 class="text-2xl font-bold text-burgundy uppercase tracking-wide mb-5">Célèbre Red</h2>
                     <dl class="space-y-3 text-sm text-gray-700">
@@ -200,7 +208,7 @@
                         <div><dt class="font-bold text-teal uppercase tracking-wider">Grapes</dt><dd>Cabernet Sauvignon blend</dd></div>
                         <div><dt class="font-bold text-teal uppercase tracking-wider">Alcohol</dt><dd>14.5% ABV</dd></div>
                         <div><dt class="font-bold text-teal uppercase tracking-wider">Flavour profile</dt><dd>Blackcurrant, Plum, Cedar, Spice</dd></div>
-                        <div><dt class="font-bold text-teal uppercase tracking-wider">Abbie's tasting notes</dt><dd>Boilerplate tasting notes to follow.</dd></div>
+                        <div><dt class="font-bold text-teal uppercase tracking-wider">Abbie's tasting notes</dt><dd>A beautiful, elegant and intense wine on the nose and palate. Entering an exciting and vibrant drinking window from now to a decade or more!  Such was its fruit intensity.</dd></div>
                     </dl>
                 </div>
                 
@@ -250,5 +258,16 @@
     <footer class="bg-ink text-cream pt-12 pb-6 border-t border-tan/20 mt-auto">
         <div class="text-center text-xs opacity-50 uppercase tracking-widest pt-6">&copy; 2026 Vintage Politics Ltd. All rights reserved.</div>
     </footer>
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>

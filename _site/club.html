@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Club | Vintage Politics</title>
     <link rel="stylesheet" href="https://use.typekit.net/rxx7bfh.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { theme: { extend: { colors: { burgundy: '#401125', teal: '#305450', cream: '#E5DCD7', rust: '#BF6536', tan: '#CB997E', ink: '#02020A' }, fontFamily: { sans: ['"futura-pt"', 'ui-sans-serif', 'system-ui', 'sans-serif'] } } } }</script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="bg-cream text-ink font-sans antialiased flex flex-col min-h-screen overflow-y-scroll">
     
@@ -59,12 +62,19 @@
             </div>
             <p class="text-ink mb-6">For people who want to be closer to Vintage Politics.</p>
             <ul class="space-y-3 text-sm text-gray-700 flex-grow">
+                
                 <li class="flex gap-3"><span class="text-rust font-bold" aria-hidden="true">+</span><span>Early access to episodes</span></li>
+                
                 <li class="flex gap-3"><span class="text-rust font-bold" aria-hidden="true">+</span><span>Members-only newsletter and behind-the-scenes updates</span></li>
+                
                 <li class="flex gap-3"><span class="text-rust font-bold" aria-hidden="true">+</span><span>Vote on future guests and submit questions</span></li>
+                
                 <li class="flex gap-3"><span class="text-rust font-bold" aria-hidden="true">+</span><span>15% off Académie du Vin books</span></li>
+                
                 <li class="flex gap-3"><span class="text-rust font-bold" aria-hidden="true">+</span><span>10% off Wine Scholar Guild courses</span></li>
+                
                 <li class="flex gap-3"><span class="text-rust font-bold" aria-hidden="true">+</span><span>Selected partner offers from Vintage Politics supporters</span></li>
+                
             </ul>
         </article>
 
@@ -72,15 +82,21 @@
             <p class="text-xs font-bold uppercase tracking-widest text-tan mb-2">Premium membership tier</p>
             <div class="flex flex-wrap items-baseline justify-between gap-2 mb-4">
                 <h2 class="text-3xl font-bold uppercase">The Cabinet</h2>
-                <p class="text-xl font-bold text-white">£15<span class="text-sm font-normal text-cream/80">/month</span></p>
+                <p class="text-xl font-bold text-white">£200<span class="text-sm font-normal text-cream/80">/year</span></p>
             </div>
             <p class="text-cream mb-6">Everything in The Lobby, plus:</p>
             <ul class="space-y-3 text-sm text-cream/90 flex-grow">
-                <li class="flex gap-3"><span class="text-tan font-bold" aria-hidden="true">+</span><span>An online tasting with host Abbie Bennington for you and up to 10 guests (not including wines) worth £500</span></li>
+                
+                <li class="flex gap-3"><span class="text-tan font-bold" aria-hidden="true">+</span><span>An online tasting with host Abbie Bennington for you and up to 10 guests (not including wines) worth £350</span></li>
+                
                 <li class="flex gap-3"><span class="text-tan font-bold" aria-hidden="true">+</span><span>Members-only Q&amp;As and conversations</span></li>
+                
                 <li class="flex gap-3"><span class="text-tan font-bold" aria-hidden="true">+</span><span>Regular and different wine offers and partner benefits</span></li>
+                
                 <li class="flex gap-3"><span class="text-tan font-bold" aria-hidden="true">+</span><span>Priority booking and preferential pricing for live events</span></li>
+                
                 <li class="flex gap-3"><span class="text-tan font-bold" aria-hidden="true">+</span><span>Curated wine recommendations linked to episodes</span></li>
+                
             </ul>
         </article>
     </div>
@@ -88,12 +104,12 @@
     <div class="bg-white p-10 rounded-lg shadow-2xl border-t-4 border-rust">
         <h2 class="text-3xl font-bold text-teal mb-4 uppercase">Join the Waitlist</h2>
         <form action="https://api.web3forms.com/submit" method="POST" class="max-w-md mx-auto">
-            <input type="hidden" name="access_key" value="e34d3866-72b4-46cc-aa7b-c9b6f7a750d3">
-            <input type="hidden" name="subject" value="Vintage Politics Club waitlist enquiry">
-            <input type="hidden" name="enquiry-type" value="Club waitlist">
-            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <input type="hidden" name="access_key" value="e34d3866-72b4-46cc-aa7b-c9b6f7a750d3" />
+            <input type="hidden" name="subject" value="Vintage Politics Club waitlist enquiry" />
+            <input type="hidden" name="enquiry-type" value="Club waitlist" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
             <label for="club-email" class="sr-only">Your Email Address</label>
-            <input type="email" id="club-email" name="email" placeholder="Your Email Address" class="w-full px-4 py-3 mb-4 border border-tan rounded focus:outline-none focus:border-burgundy" required>
+            <input type="email" id="club-email" name="email" placeholder="Your Email Address" class="w-full px-4 py-3 mb-4 border border-tan rounded focus:outline-none focus:border-burgundy" required />
             <button type="submit" class="w-full bg-burgundy text-white font-bold py-3 px-6 rounded hover:bg-teal transition uppercase tracking-wider">Register Interest</button>
         </form>
     </div>
@@ -104,5 +120,16 @@
     <footer class="bg-ink text-cream pt-12 pb-6 border-t border-tan/20 mt-auto">
         <div class="text-center text-xs opacity-50 uppercase tracking-widest pt-6">&copy; 2026 Vintage Politics Ltd. All rights reserved.</div>
     </footer>
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>

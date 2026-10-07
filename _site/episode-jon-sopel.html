@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jon Sopel | Vintage Politics</title>
     <link rel="stylesheet" href="https://use.typekit.net/rxx7bfh.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { theme: { extend: { colors: { burgundy: '#401125', teal: '#305450', cream: '#E5DCD7', rust: '#BF6536', tan: '#CB997E', ink: '#02020A' }, fontFamily: { sans: ['"futura-pt"', 'ui-sans-serif', 'system-ui', 'sans-serif'] } } } }</script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="bg-cream text-ink font-sans antialiased flex flex-col min-h-screen overflow-y-scroll">
     
@@ -57,7 +60,12 @@
     <!-- YOUTUBE PLAYER -->
     <div class="bg-white rounded-lg shadow-xl overflow-hidden border border-tan/30 mb-8">
         <div class="aspect-w-16 aspect-h-9 bg-ink relative" style="padding-top: 56.25%;">
-            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/oF0fjgacqFg?si=86ebeK2DKnxk7fCZ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <!-- Check if there is a YouTube ID -->
+            
+                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/oF0fjgacqFg?si=86ebeK2DKnxk7fCZ" title="Vintage Politics Episode: Jon Sopel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            
+            <!-- Fallback: Guest Image -->
+            
         </div>
     </div>
 
@@ -72,7 +80,7 @@
             
             <div class="bg-cream/50 border border-tan/30 p-6 rounded-lg mb-8">
                 <h3 class="text-xl font-bold text-burgundy mb-4 uppercase">About Jon Sopel</h3>
-                <img src="img/guests/jonsopel_720p.webp" alt="Portrait of Jon Sopel" class="w-full h-64 object-cover rounded mb-4 shadow-sm grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+                <img src="/img/guests/jonsopel_720p.webp" alt="Portrait of Jon Sopel" class="w-full h-64 object-cover rounded mb-4 shadow-sm grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
                 <p class="text-ink text-sm leading-relaxed">Jon Sopel is a journalist, broadcaster and author, co-host of The News Agents podcast and a former BBC North America Editor.</p>
             </div>
         </div>
@@ -107,15 +115,15 @@
                             <span class="block text-xs font-bold text-rust uppercase tracking-wider mb-1">Wine 1</span>
                             <h4 class="text-lg font-bold text-ink mb-1">
                                 
-                                Hugel Crémant d&#39;Alsace
+                                Pouilly-Fuissé, Pierre Desroches
                                 
                             </h4>
                             <p class="text-sm text-gray-500">
                                 
-                                <a href="https://hedonism.co.uk/products/cremant-d-alsace-hugel-2020" target="_blank" rel="noopener noreferrer" class="hover:text-rust transition">Hedonism</a>
+                                <a href="https://www.hachette-vins.com/guide-vins/les-vins/dom-pierre-desroches-en-charmont-2023-2026/202685930/" target="_blank" rel="noopener noreferrer" class="hover:text-rust transition">Savoy Grill</a>
                                 
-                                 | 2019
-                                 | Price not listed
+                                 | 2023
+                                 | ~£40.00
                             </p>
                         </li>
                         
@@ -139,34 +147,18 @@
                         </li>
                         
                         <li class="border-b border-tan/30 pb-4 last:border-0 last:pb-0">
-                            <span class="block text-xs font-bold text-rust uppercase tracking-wider mb-1">Wine 3</span>
+                            <span class="block text-xs font-bold text-rust uppercase tracking-wider mb-1">Jon&#39;s Vintage</span>
                             <h4 class="text-lg font-bold text-ink mb-1">
                                 
-                                Château d&#39;Yquem
+                                Gérard Bertrand Legend Vintage Rivesaltes
                                 
                             </h4>
                             <p class="text-sm text-gray-500">
                                 
-                                <a href="https://hedonism.co.uk/products/yquem-half-2007" target="_blank" rel="noopener noreferrer" class="hover:text-rust transition">HIDE</a>
-                                
-                                 | 2007
-                                 | £185.00
-                            </p>
-                        </li>
-                        
-                        <li class="border-b border-tan/30 pb-4 last:border-0 last:pb-0">
-                            <span class="block text-xs font-bold text-rust uppercase tracking-wider mb-1">Vintage 1963</span>
-                            <h4 class="text-lg font-bold text-ink mb-1">
-                                
-                                Château Margaux
-                                
-                            </h4>
-                            <p class="text-sm text-gray-500">
-                                
-                                HIDE
+                                <a href="https://www.gerard-bertrand.com/en/products/legend-vintage-natural-sweet-wines-1955-rivesaltes-75cl" target="_blank" rel="noopener noreferrer" class="hover:text-rust transition">Gérard Bertrand</a>
                                 
                                  | 1963
-                                 | No longer available
+                                 | ~£526.00
                             </p>
                         </li>
                         
@@ -183,7 +175,7 @@
                 <div id="ulysses-detail" class="wine-panel hidden opacity-0 transition-opacity duration-400" aria-hidden="true">
                     <button type="button" class="text-sm font-bold text-rust hover:text-teal transition uppercase tracking-wider mb-6" onclick="showWineList('ulysses-detail')">&larr; Back to list</button>
                     
-                    <img src="img/wines/bottle_ulysses.webp" alt="Bottle of Ulysses" class="w-full max-h-72 object-contain mb-6">
+                    <img src="/img/wines/bottle_ulysses.webp" alt="Bottle of Ulysses" class="w-full max-h-72 object-contain mb-6">
                     
                     <h2 class="text-2xl font-bold text-burgundy uppercase tracking-wide mb-5">Ulysses</h2>
                     <dl class="space-y-3 text-sm text-gray-700">
@@ -200,11 +192,9 @@
                         <div><dt class="font-bold text-teal uppercase tracking-wider">Grapes</dt><dd>Cabernet Sauvignon</dd></div>
                         <div><dt class="font-bold text-teal uppercase tracking-wider">Alcohol</dt><dd>15% ABV</dd></div>
                         <div><dt class="font-bold text-teal uppercase tracking-wider">Flavour profile</dt><dd>Blackcurrant, Cedar, Dark chocolate, Fine spice</dd></div>
-                        <div><dt class="font-bold text-teal uppercase tracking-wider">Abbie's tasting notes</dt><dd>Boilerplate tasting notes to follow.</dd></div>
+                        <div><dt class="font-bold text-teal uppercase tracking-wider">Abbie's tasting notes</dt><dd>A top Napa Valley producer making new world wines of the finest quality thanks to the king of grapes Cabernet Sauvignon.</dd></div>
                     </dl>
                 </div>
-                
-                
                 
                 
                 
@@ -250,5 +240,16 @@
     <footer class="bg-ink text-cream pt-12 pb-6 border-t border-tan/20 mt-auto">
         <div class="text-center text-xs opacity-50 uppercase tracking-widest pt-6">&copy; 2026 Vintage Politics Ltd. All rights reserved.</div>
     </footer>
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>

@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jo Coburn | Vintage Politics</title>
     <link rel="stylesheet" href="https://use.typekit.net/rxx7bfh.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { theme: { extend: { colors: { burgundy: '#401125', teal: '#305450', cream: '#E5DCD7', rust: '#BF6536', tan: '#CB997E', ink: '#02020A' }, fontFamily: { sans: ['"futura-pt"', 'ui-sans-serif', 'system-ui', 'sans-serif'] } } } }</script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="bg-cream text-ink font-sans antialiased flex flex-col min-h-screen overflow-y-scroll">
     
@@ -57,7 +60,12 @@
     <!-- YOUTUBE PLAYER -->
     <div class="bg-white rounded-lg shadow-xl overflow-hidden border border-tan/30 mb-8">
         <div class="aspect-w-16 aspect-h-9 bg-ink relative" style="padding-top: 56.25%;">
-            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/tOTaEomtsWs?si=XAf9oyC57cFrGlXu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <!-- Check if there is a YouTube ID -->
+            
+                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/tOTaEomtsWs?si=XAf9oyC57cFrGlXu" title="Vintage Politics Episode: Jo Coburn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            
+            <!-- Fallback: Guest Image -->
+            
         </div>
     </div>
 
@@ -72,7 +80,7 @@
             
             <div class="bg-cream/50 border border-tan/30 p-6 rounded-lg mb-8">
                 <h3 class="text-xl font-bold text-burgundy mb-4 uppercase">About Jo Coburn</h3>
-                <img src="img/guests/jocoburn_720p.webp" alt="Portrait of Jo Coburn" class="w-full h-64 object-cover rounded mb-4 shadow-sm grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+                <img src="/img/guests/jocoburn_720p.webp" alt="Portrait of Jo Coburn" class="w-full h-64 object-cover rounded mb-4 shadow-sm grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
                 <p class="text-ink text-sm leading-relaxed">Jo Coburn is an experienced political broadcaster and journalist, best known for her work at the BBC and now as a presenter on Times Radio.</p>
             </div>
         </div>
@@ -185,7 +193,7 @@
                 <div id="gonzalez-byass-noe-pedro-ximenez-vors-30-years-detail" class="wine-panel hidden opacity-0 transition-opacity duration-400" aria-hidden="true">
                     <button type="button" class="text-sm font-bold text-rust hover:text-teal transition uppercase tracking-wider mb-6" onclick="showWineList('gonzalez-byass-noe-pedro-ximenez-vors-30-years-detail')">&larr; Back to list</button>
                     
-                    <img src="img/wines/bottle_px.webp" alt="Bottle of González Byass &#39;Noé&#39; Pedro Ximénez VORS 30 Years" class="w-full max-h-72 object-contain mb-6">
+                    <img src="/img/wines/bottle_px.webp" alt="Bottle of González Byass &#39;Noé&#39; Pedro Ximénez VORS 30 Years" class="w-full max-h-72 object-contain mb-6">
                     
                     <h2 class="text-2xl font-bold text-burgundy uppercase tracking-wide mb-5">González Byass &#39;Noé&#39; Pedro Ximénez VORS 30 Years</h2>
                     <dl class="space-y-3 text-sm text-gray-700">
@@ -202,7 +210,7 @@
                         <div><dt class="font-bold text-teal uppercase tracking-wider">Grapes</dt><dd>Pedro Ximénez</dd></div>
                         <div><dt class="font-bold text-teal uppercase tracking-wider">Alcohol</dt><dd>15.5% ABV</dd></div>
                         <div><dt class="font-bold text-teal uppercase tracking-wider">Flavour profile</dt><dd>Raisin, Fig, Treacle, Dark chocolate</dd></div>
-                        <div><dt class="font-bold text-teal uppercase tracking-wider">Abbie's tasting notes</dt><dd>Boilerplate tasting notes to follow.</dd></div>
+                        <div><dt class="font-bold text-teal uppercase tracking-wider">Abbie's tasting notes</dt><dd>González Byass might be a by word for quality in the world of sherry and this unctuous PX didn’t disappoint. Deep, dark chocolate, dried fruits and a hint of liquorice made for a decadent and enjoyable glass!</dd></div>
                     </dl>
                 </div>
                 
@@ -250,5 +258,16 @@
     <footer class="bg-ink text-cream pt-12 pb-6 border-t border-tan/20 mt-auto">
         <div class="text-center text-xs opacity-50 uppercase tracking-widest pt-6">&copy; 2026 Vintage Politics Ltd. All rights reserved.</div>
     </footer>
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>

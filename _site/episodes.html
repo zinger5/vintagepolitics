@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Episodes | Vintage Politics</title>
     <link rel="stylesheet" href="https://use.typekit.net/rxx7bfh.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { theme: { extend: { colors: { burgundy: '#401125', teal: '#305450', cream: '#E5DCD7', rust: '#BF6536', tan: '#CB997E', ink: '#02020A' }, fontFamily: { sans: ['"futura-pt"', 'ui-sans-serif', 'system-ui', 'sans-serif'] } } } }</script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="bg-cream text-ink font-sans antialiased flex flex-col min-h-screen overflow-y-scroll">
     
@@ -52,6 +55,9 @@
     <!-- AUTOMATED NAVIGATION LINKS -->
     <nav aria-label="Episode sections" class="flex flex-wrap items-center gap-3 mb-12 text-sm font-bold uppercase tracking-wider">
         
+        <a href="#series-2" class="text-rust hover:text-teal transition">Series 2</a>
+        <span class="text-tan" aria-hidden="true">|</span>
+        
         <a href="#special" class="text-rust hover:text-teal transition">Special</a>
         <span class="text-tan" aria-hidden="true">|</span>
         
@@ -62,6 +68,60 @@
 
     <!-- AUTOMATED SECTIONS & GRIDS -->
     
+    <section id="series-2" class="scroll-mt-24 mb-16">
+        <h2 class="text-3xl font-bold text-burgundy mb-6 uppercase tracking-wide">Series 2</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            
+            <article class="bg-white p-6 rounded-lg shadow-lg border border-tan/30 flex flex-col">
+                <div class="aspect-w-16 aspect-h-9 bg-ink mb-4 rounded overflow-hidden relative" style="padding-top: 56.25%;">
+                    <!-- Check if there is a YouTube ID -->
+                    
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/5GAz8APF7QQ" title="Vintage Politics Episode: George Osborne" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    
+                    <!-- Fallback: Guest Image -->
+                    
+                </div>
+                <h2 class="text-2xl font-bold text-burgundy mb-2 uppercase">
+                    <a href="/episode-george-osborne.html" class="hover:text-rust transition">George Osborne</a>
+                </h2>
+                <p class="text-gray-700 mb-4 flex-grow">George Osborne, Managing Director of Open AI, Chairman of The British Museum and former Chancellor of the Exchequer.</p>
+            </article>
+            
+            <article class="bg-white p-6 rounded-lg shadow-lg border border-tan/30 flex flex-col">
+                <div class="aspect-w-16 aspect-h-9 bg-ink mb-4 rounded overflow-hidden relative" style="padding-top: 56.25%;">
+                    <!-- Check if there is a YouTube ID -->
+                    
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/tJDyLnYzi00" title="Vintage Politics Episode: Anthony Scaramucci" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    
+                    <!-- Fallback: Guest Image -->
+                    
+                </div>
+                <h2 class="text-2xl font-bold text-burgundy mb-2 uppercase">
+                    <a href="/episode-anthony-scaramucci.html" class="hover:text-rust transition">Anthony Scaramucci</a>
+                </h2>
+                <p class="text-gray-700 mb-4 flex-grow">Anthony Scaramucci is an American financier, entrepreneur, author and political commentator. Founder and Managing Partner of SkyBridge Capital and Chairman of SALT, he briefly served as White House Communications Director under Donald Trump in 2017. Now a prominent media voice on US politics, finance and global affairs, he is also a co-host of The Rest Is Politics: US and author of the new book All the Wrong Moves.</p>
+            </article>
+            
+            <article class="bg-white p-6 rounded-lg shadow-lg border border-tan/30 flex flex-col">
+                <div class="aspect-w-16 aspect-h-9 bg-ink mb-4 rounded overflow-hidden relative" style="padding-top: 56.25%;">
+                    <!-- Check if there is a YouTube ID -->
+                    
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/FEfEloFExIk" title="Vintage Politics Episode: Jeremy Bowen" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    
+                    <!-- Fallback: Guest Image -->
+                    
+                </div>
+                <h2 class="text-2xl font-bold text-burgundy mb-2 uppercase">
+                    <a href="/episode-jeremy-bowen.html" class="hover:text-rust transition">Jeremy Bowen</a>
+                </h2>
+                <p class="text-gray-700 mb-4 flex-grow">Jeremy Bowen is the BBC&#39;s International Editor and one of Britain&#39;s most experienced foreign correspondents. Since joining the BBC in 1984, he has reported from more than 70 countries and covered conflicts across the Middle East, the Balkans and beyond.</p>
+            </article>
+            
+
+        </div>
+    </section>
+    
     <section id="special" class="scroll-mt-24 mb-16">
         <h2 class="text-3xl font-bold text-burgundy mb-6 uppercase tracking-wide">Special</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -69,7 +129,12 @@
             
             <article class="bg-white p-6 rounded-lg shadow-lg border border-tan/30 flex flex-col">
                 <div class="aspect-w-16 aspect-h-9 bg-ink mb-4 rounded overflow-hidden relative" style="padding-top: 56.25%;">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/GwqIO19rNc0?si=MQGjkwZTJkgyESQ-" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <!-- Check if there is a YouTube ID -->
+                    
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/GwqIO19rNc0?si=MQGjkwZTJkgyESQ-" title="Vintage Politics Episode: James Lyons" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    
+                    <!-- Fallback: Guest Image -->
+                    
                 </div>
                 <h2 class="text-2xl font-bold text-burgundy mb-2 uppercase">
                     <a href="/episode-james-lyons.html" class="hover:text-rust transition">James Lyons</a>
@@ -88,7 +153,12 @@
             
             <article class="bg-white p-6 rounded-lg shadow-lg border border-tan/30 flex flex-col">
                 <div class="aspect-w-16 aspect-h-9 bg-ink mb-4 rounded overflow-hidden relative" style="padding-top: 56.25%;">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/GwBBTRtcMzM?si=zX4NMUOyWbSUjbuK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <!-- Check if there is a YouTube ID -->
+                    
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/GwBBTRtcMzM?si=zX4NMUOyWbSUjbuK" title="Vintage Politics Episode: Lord Chris Patten" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    
+                    <!-- Fallback: Guest Image -->
+                    
                 </div>
                 <h2 class="text-2xl font-bold text-burgundy mb-2 uppercase">
                     <a href="/episode-lord-chris-patten.html" class="hover:text-rust transition">Lord Chris Patten</a>
@@ -98,7 +168,12 @@
             
             <article class="bg-white p-6 rounded-lg shadow-lg border border-tan/30 flex flex-col">
                 <div class="aspect-w-16 aspect-h-9 bg-ink mb-4 rounded overflow-hidden relative" style="padding-top: 56.25%;">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/xDiN6Ktz4AU?si=suCj66ewUKwJxcc6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <!-- Check if there is a YouTube ID -->
+                    
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/xDiN6Ktz4AU?si=suCj66ewUKwJxcc6" title="Vintage Politics Episode: Baroness Ayesha Hazarika" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    
+                    <!-- Fallback: Guest Image -->
+                    
                 </div>
                 <h2 class="text-2xl font-bold text-burgundy mb-2 uppercase">
                     <a href="/episode-baroness-ayesha-hazarika.html" class="hover:text-rust transition">Baroness Ayesha Hazarika</a>
@@ -108,7 +183,12 @@
             
             <article class="bg-white p-6 rounded-lg shadow-lg border border-tan/30 flex flex-col">
                 <div class="aspect-w-16 aspect-h-9 bg-ink mb-4 rounded overflow-hidden relative" style="padding-top: 56.25%;">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/3wVO6A4mOy8?si=MqDcz77dUCqrs5fZ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <!-- Check if there is a YouTube ID -->
+                    
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/3wVO6A4mOy8?si=MqDcz77dUCqrs5fZ" title="Vintage Politics Episode: John Pienaar" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    
+                    <!-- Fallback: Guest Image -->
+                    
                 </div>
                 <h2 class="text-2xl font-bold text-burgundy mb-2 uppercase">
                     <a href="/episode-john-pienaar.html" class="hover:text-rust transition">John Pienaar</a>
@@ -118,7 +198,12 @@
             
             <article class="bg-white p-6 rounded-lg shadow-lg border border-tan/30 flex flex-col">
                 <div class="aspect-w-16 aspect-h-9 bg-ink mb-4 rounded overflow-hidden relative" style="padding-top: 56.25%;">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/cKQgDF31b3U?si=buzNXwpV9_NyRobp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <!-- Check if there is a YouTube ID -->
+                    
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/cKQgDF31b3U?si=buzNXwpV9_NyRobp" title="Vintage Politics Episode: Decca Aitkenhead" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    
+                    <!-- Fallback: Guest Image -->
+                    
                 </div>
                 <h2 class="text-2xl font-bold text-burgundy mb-2 uppercase">
                     <a href="/episode-decca-aitkenhead.html" class="hover:text-rust transition">Decca Aitkenhead</a>
@@ -128,7 +213,12 @@
             
             <article class="bg-white p-6 rounded-lg shadow-lg border border-tan/30 flex flex-col">
                 <div class="aspect-w-16 aspect-h-9 bg-ink mb-4 rounded overflow-hidden relative" style="padding-top: 56.25%;">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/Xt-sUxvsSqM?si=eFKLSuRIb5jpCeLg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <!-- Check if there is a YouTube ID -->
+                    
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/Xt-sUxvsSqM?si=eFKLSuRIb5jpCeLg" title="Vintage Politics Episode: Guto Harri" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    
+                    <!-- Fallback: Guest Image -->
+                    
                 </div>
                 <h2 class="text-2xl font-bold text-burgundy mb-2 uppercase">
                     <a href="/episode-guto-harri.html" class="hover:text-rust transition">Guto Harri</a>
@@ -138,7 +228,12 @@
             
             <article class="bg-white p-6 rounded-lg shadow-lg border border-tan/30 flex flex-col">
                 <div class="aspect-w-16 aspect-h-9 bg-ink mb-4 rounded overflow-hidden relative" style="padding-top: 56.25%;">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/tOTaEomtsWs?si=XAf9oyC57cFrGlXu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <!-- Check if there is a YouTube ID -->
+                    
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/tOTaEomtsWs?si=XAf9oyC57cFrGlXu" title="Vintage Politics Episode: Jo Coburn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    
+                    <!-- Fallback: Guest Image -->
+                    
                 </div>
                 <h2 class="text-2xl font-bold text-burgundy mb-2 uppercase">
                     <a href="/episode-jo-coburn.html" class="hover:text-rust transition">Jo Coburn</a>
@@ -148,7 +243,12 @@
             
             <article class="bg-white p-6 rounded-lg shadow-lg border border-tan/30 flex flex-col">
                 <div class="aspect-w-16 aspect-h-9 bg-ink mb-4 rounded overflow-hidden relative" style="padding-top: 56.25%;">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/qnQH1QDpI8c?si=u7exHYmsyEmIOatR" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <!-- Check if there is a YouTube ID -->
+                    
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/qnQH1QDpI8c?si=u7exHYmsyEmIOatR" title="Vintage Politics Episode: Dom Joly" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    
+                    <!-- Fallback: Guest Image -->
+                    
                 </div>
                 <h2 class="text-2xl font-bold text-burgundy mb-2 uppercase">
                     <a href="/episode-dom-joly.html" class="hover:text-rust transition">Dom Joly</a>
@@ -158,7 +258,12 @@
             
             <article class="bg-white p-6 rounded-lg shadow-lg border border-tan/30 flex flex-col">
                 <div class="aspect-w-16 aspect-h-9 bg-ink mb-4 rounded overflow-hidden relative" style="padding-top: 56.25%;">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/o9fDV3tB83w?si=aAIjo0LuqjyIaVHY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <!-- Check if there is a YouTube ID -->
+                    
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/o9fDV3tB83w?si=aAIjo0LuqjyIaVHY" title="Vintage Politics Episode: Nick Robinson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    
+                    <!-- Fallback: Guest Image -->
+                    
                 </div>
                 <h2 class="text-2xl font-bold text-burgundy mb-2 uppercase">
                     <a href="/episode-nick-robinson.html" class="hover:text-rust transition">Nick Robinson</a>
@@ -168,7 +273,12 @@
             
             <article class="bg-white p-6 rounded-lg shadow-lg border border-tan/30 flex flex-col">
                 <div class="aspect-w-16 aspect-h-9 bg-ink mb-4 rounded overflow-hidden relative" style="padding-top: 56.25%;">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/QzvmdhTZjtM?si=OJ0hAtf7Pher7573" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <!-- Check if there is a YouTube ID -->
+                    
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/QzvmdhTZjtM?si=OJ0hAtf7Pher7573" title="Vintage Politics Episode: Anna Foster" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    
+                    <!-- Fallback: Guest Image -->
+                    
                 </div>
                 <h2 class="text-2xl font-bold text-burgundy mb-2 uppercase">
                     <a href="/episode-anna-foster.html" class="hover:text-rust transition">Anna Foster</a>
@@ -178,7 +288,12 @@
             
             <article class="bg-white p-6 rounded-lg shadow-lg border border-tan/30 flex flex-col">
                 <div class="aspect-w-16 aspect-h-9 bg-ink mb-4 rounded overflow-hidden relative" style="padding-top: 56.25%;">
-                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/oF0fjgacqFg?si=86ebeK2DKnxk7fCZ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <!-- Check if there is a YouTube ID -->
+                    
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/oF0fjgacqFg?si=86ebeK2DKnxk7fCZ" title="Vintage Politics Episode: Jon Sopel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    
+                    <!-- Fallback: Guest Image -->
+                    
                 </div>
                 <h2 class="text-2xl font-bold text-burgundy mb-2 uppercase">
                     <a href="/episode-jon-sopel.html" class="hover:text-rust transition">Jon Sopel</a>
@@ -198,5 +313,16 @@
     <footer class="bg-ink text-cream pt-12 pb-6 border-t border-tan/20 mt-auto">
         <div class="text-center text-xs opacity-50 uppercase tracking-widest pt-6">&copy; 2026 Vintage Politics Ltd. All rights reserved.</div>
     </footer>
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>

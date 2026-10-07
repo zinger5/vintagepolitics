@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decca Aitkenhead | Vintage Politics</title>
     <link rel="stylesheet" href="https://use.typekit.net/rxx7bfh.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { theme: { extend: { colors: { burgundy: '#401125', teal: '#305450', cream: '#E5DCD7', rust: '#BF6536', tan: '#CB997E', ink: '#02020A' }, fontFamily: { sans: ['"futura-pt"', 'ui-sans-serif', 'system-ui', 'sans-serif'] } } } }</script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="bg-cream text-ink font-sans antialiased flex flex-col min-h-screen overflow-y-scroll">
     
@@ -57,7 +60,12 @@
     <!-- YOUTUBE PLAYER -->
     <div class="bg-white rounded-lg shadow-xl overflow-hidden border border-tan/30 mb-8">
         <div class="aspect-w-16 aspect-h-9 bg-ink relative" style="padding-top: 56.25%;">
-            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/cKQgDF31b3U?si=buzNXwpV9_NyRobp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <!-- Check if there is a YouTube ID -->
+            
+                <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/cKQgDF31b3U?si=buzNXwpV9_NyRobp" title="Vintage Politics Episode: Decca Aitkenhead" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            
+            <!-- Fallback: Guest Image -->
+            
         </div>
     </div>
 
@@ -72,7 +80,7 @@
             
             <div class="bg-cream/50 border border-tan/30 p-6 rounded-lg mb-8">
                 <h3 class="text-xl font-bold text-burgundy mb-4 uppercase">About Decca Aitkenhead</h3>
-                <img src="img/guests/deccaaitkenhead_720p.webp" alt="Portrait of Decca Aitkenhead" class="w-full h-64 object-cover rounded mb-4 shadow-sm grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
+                <img src="/img/guests/deccaaitkenhead_720p.webp" alt="Portrait of Decca Aitkenhead" class="w-full h-64 object-cover rounded mb-4 shadow-sm grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700 ease-in-out">
                 <p class="text-ink text-sm leading-relaxed">Decca Aitkenhead is an award-winning journalist, author and The Chief Interviewer at The Sunday Times, known for her incisive, revealing interviews with some of the most prominent figures in public life.</p>
             </div>
         </div>
@@ -185,7 +193,7 @@
                 <div id="domaine-weinbach-gewurztraminer-detail" class="wine-panel hidden opacity-0 transition-opacity duration-400" aria-hidden="true">
                     <button type="button" class="text-sm font-bold text-rust hover:text-teal transition uppercase tracking-wider mb-6" onclick="showWineList('domaine-weinbach-gewurztraminer-detail')">&larr; Back to list</button>
                     
-                    <img src="img/wines/bottle_gewurtztraminer.webp" alt="Bottle of Domaine Weinbach Gewurztraminer" class="w-full max-h-72 object-contain mb-6">
+                    <img src="/img/wines/bottle_gewurtztraminer.webp" alt="Bottle of Domaine Weinbach Gewurztraminer" class="w-full max-h-72 object-contain mb-6">
                     
                     <h2 class="text-2xl font-bold text-burgundy uppercase tracking-wide mb-5">Domaine Weinbach Gewurztraminer</h2>
                     <dl class="space-y-3 text-sm text-gray-700">
@@ -202,7 +210,7 @@
                         <div><dt class="font-bold text-teal uppercase tracking-wider">Grapes</dt><dd>Gewurztraminer</dd></div>
                         <div><dt class="font-bold text-teal uppercase tracking-wider">Alcohol</dt><dd>13.5% ABV</dd></div>
                         <div><dt class="font-bold text-teal uppercase tracking-wider">Flavour profile</dt><dd>Lychee, Rose petal, Spice, Honey</dd></div>
-                        <div><dt class="font-bold text-teal uppercase tracking-wider">Abbie's tasting notes</dt><dd>Boilerplate tasting notes to follow.</dd></div>
+                        <div><dt class="font-bold text-teal uppercase tracking-wider">Abbie's tasting notes</dt><dd>A treat to taste one of the greatest producers in Alsace and even more so this aged Gewurtztraminer which was packed with trademark lychees and rose petals, a perfect pour!</dd></div>
                     </dl>
                 </div>
                 
@@ -250,5 +258,16 @@
     <footer class="bg-ink text-cream pt-12 pb-6 border-t border-tan/20 mt-auto">
         <div class="text-center text-xs opacity-50 uppercase tracking-widest pt-6">&copy; 2026 Vintage Politics Ltd. All rights reserved.</div>
     </footer>
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 </html>
