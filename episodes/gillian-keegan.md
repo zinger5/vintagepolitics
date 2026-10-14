@@ -30,13 +30,13 @@ wines:
     supplier_url: https://www.corneyandbarrow.com/roc-de-cambes-2017-10014192017bt06-1.html
     vintage: '2017'
     price: £53.70
-	has_facts: true
-	image: https://www.corneyandbarrow.com/media/catalog/product/cache/b8b9d664691b34d077bbe07dceb660ee/1/0/10014192017bt06-v2.jpg
-	producer: François and Emilie Mitjavile
-	grapes: Merlot blend
-	alcohol: 14% ABV
-	profile: Dark berries, black pepper and dark chocolate.
-	notes: A powerful Bordeaux red, bursting with dark fruits, strong tannic grip and hints of graphite. A great wine for a long winters night!
+    has_facts: true
+    image: https://www.corneyandbarrow.com/media/catalog/product/cache/b8b9d664691b34d077bbe07dceb660ee/1/0/10014192017bt06-v2.jpg
+    producer: François and Emilie Mitjavile
+    grapes: Merlot blend
+    alcohol: 14% ABV
+    profile: Dark berries, black pepper and dark chocolate.
+    notes: A powerful Bordeaux red, bursting with dark fruits, strong tannic grip and hints of graphite. A great wine for a long winters night!
   - label: Gillian's Vintage
     name: Sandeman, 1968 Vintage Port 
     supplier: Vintage Wine & Port
