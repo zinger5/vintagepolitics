@@ -9,7 +9,8 @@ short_bio: Gillian Keegan, Former Secretary of State for Education, business wom
 wines:
   - label: Mid-Week Wine
     name: Cave de Lugny Chardonnay, Mâcon-Villages
-    supplier: Waitrose supplier_url: https://www.waitrosecellar.com/products/cave-de-lugny-chardonnay-macon-villages-083122
+    supplier: Waitrose
+    supplier_url: https://www.waitrosecellar.com/products/cave-de-lugny-chardonnay-macon-villages-083122
     vintage: '2021'
     price: £13.50
   - label: Wine 1
