@@ -3,7 +3,7 @@ _schema: default
 title: Gillian Keegan
 season_info: Series 2, Episode 4
 date: 2026-10-15T00:00:00Z
-youtube_id: 
+youtube_id: b_i1AYYmB8Y
 image_path: img/guests/gilliankeegan_720p.webp
 short_bio: Gillian Keegan, Former Secretary of State for Education, business woman and television host. 
 wines:
