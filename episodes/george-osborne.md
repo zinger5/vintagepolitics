@@ -38,7 +38,7 @@ wines:
     vintage: '1971'
     price: £139
     has_facts: true
-    image: https://www.vintagewineandport.co.uk/products/Barbaresco-1971-Giacomo-Borgogno-Riserva?srsltid=AU7gw4WQGefsPy79QOpqxat-no8S7zMzAOPrA_XjEM_nCjLKeaig5mna
+    image: https://www.vintagewineandport.co.uk/images/products/main%5FProduct%5F31224%2DIMG%5F3251%2Ejpg%2E0%2Ejpg
     location: Piedmont, Italy
     producer: Giacomo Borgogno
     grapes: Nebbiolo
