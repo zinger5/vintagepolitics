@@ -38,7 +38,7 @@ wines:
     vintage: '1972'
     price: £395
     has_facts: true
-    image: https://www.vintagewineandport.co.uk/products/Blandys-1972-Vintage-Bual-Madeira-0
+    image: https://blandys.com/wp-content/uploads/2025/04/Blandys-Datados-Frasqueiras-Bual-1972-Frasqueiras.webp
     producer: Blandy's
     grapes: Bual
     alcohol: 21% ABV
