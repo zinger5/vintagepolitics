@@ -3,7 +3,7 @@ _schema: default
 title: Katya Adler
 season_info: Series 2, Episode 5
 date: 2026-10-22T00:00:00Z
-youtube_id: 
+youtube_id: 8WP1xCbPQh4
 image_path: img/guests/katyaadler_720p.webp
 short_bio: Katya Adler, BBC Europe Editor
 wines:
