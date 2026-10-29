@@ -3,7 +3,7 @@ _schema: default
 title: David Davis
 season_info: Series 2, Episode 6
 date: 2026-10-29T00:00:00Z
-youtube_id: 
+youtube_id: hdgUho2KKZo
 image_path: img/guests/daviddavis_720p.webp
 short_bio: David Davis MP for Goole & Pocklington, former Brexit Secretary
 wines:
