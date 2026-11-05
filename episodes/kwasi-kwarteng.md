@@ -3,7 +3,7 @@ _schema: default
 title: Kwasi Kwarteng
 season_info: Series 2, Episode 7
 date: 2026-11-05T00:00:00Z
-youtube_id: 
+youtube_id: H4xJjNj3o-g
 image_path: img/guests/kwasikwarteng_720p.webp
 short_bio: Kwasi Kwarteng, Former Chancellor of the Exchequer
 wines:
