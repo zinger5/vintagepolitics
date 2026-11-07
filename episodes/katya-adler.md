@@ -26,10 +26,10 @@ wines:
     vintage: '2022'
     price: £29.95
   - label: Wine 3
-    name: Brunello di Montalcino Donna Rebecca 
+    name: Brunello di Montalcino Ridolfi
     supplier: Corney and Barrow
     supplier_url: https://www.corneyandbarrow.com/catalogsearch/result/?q=donna%20rebecca%20ridolfi%202019
-    vintage: '2017'
+    vintage: '2018'
     notes: A wine designed for long dark nights, warm fires and a hearty dinner. Black fruits, menthol and silky tannins this wine lingers long on the palate in all the right ways.
   - label: Katya's Vintage
     name: Blandy's Bual
