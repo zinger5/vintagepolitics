@@ -28,7 +28,7 @@ wines:
   - label: Wine 3
     name: Brunello di Montalcino Ridolfi
     supplier: Corney and Barrow
-    supplier_url: https://www.corneyandbarrow.com/catalogsearch/result/?q=donna%20rebecca%20ridolfi%202019
+    supplier_url: https://www.corneyandbarrow.com/brunello-di-montalcino-ridolfi-2018-10198912018bt06-1.html
     vintage: '2018'
     notes: A wine designed for long dark nights, warm fires and a hearty dinner. Black fruits, menthol and silky tannins this wine lingers long on the palate in all the right ways.
   - label: Katya's Vintage
