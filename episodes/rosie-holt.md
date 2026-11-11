@@ -4,6 +4,7 @@ title: Rosie Holt
 season_info: Series 2, Episode 8
 date: 2026-11-12T01:00:00.000+00:00
 youtube_id: ""
+image_path: img/guests/rosieholt_720p.webp
 short_bio: Rosie Holt - actor, comedian and satirist
 wines:
   - has_facts: false
