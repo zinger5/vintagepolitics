@@ -3,9 +3,9 @@ _schema: default
 title: Cathy Newman
 season_info: Series 2, Episode 9
 date: 2026-11-18T00:00:00Z
-youtube_id: 
+youtube_id: Re46FaV55iY
 image_path: img/guests/cathynewman_720p.webp
-short_bio: Cathy Newman veteran journalist and presenter shares the stories behind something of the most important political and cultural interviews of the last decade.
+short_bio: Cathy Newman, Presenter, The Cathy Newman Show, Sky News and Presenter, Times Radio
 wines:
   - label: Mid-Week Wine
     name: Lucky Saint Lager
