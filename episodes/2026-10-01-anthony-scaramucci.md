@@ -4,7 +4,7 @@ title: Anthony Scaramucci
 season_info: Series 2, Episode 2
 date: 2026-10-01T01:00:00.000+01:00
 youtube_id: tJDyLnYzi00
-image_path: /img/guests/anthonyscaramucci_720p.webp
+image_path: img/guests/anthonyscaramucci_720p.webp
 short_bio: "Anthony Scaramucci is an American financier, entrepreneur, author
   and political commentator. Founder and Managing Partner of SkyBridge Capital
   and Chairman of SALT, he briefly served as White House Communications Director
