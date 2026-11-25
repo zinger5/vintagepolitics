@@ -3,7 +3,7 @@ _schema: default
 title: Matt Forde
 season_info: Series 2, Episode 10
 date: 2026-11-26T00:00:00Z
-youtube_id: 
+youtube_id: B7uNR4HDtlk
 image_path: img/guests/mattforde_720p.webp
 short_bio: Matt Forde, Comedian, impressionist, political interviewer and satirist.
 wines:
